@@ -5,5 +5,5 @@ interface props {
 }
 
 export default function SurveyLayout({ children }: props) {
-  return <Row className="w-full h-full p-10 bg-white">{children}</Row>;
+  return <Row className="w-full h-full p-6 bg-white">{children}</Row>;
 }
