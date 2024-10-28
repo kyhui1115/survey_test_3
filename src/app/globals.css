@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  scrollbar-width: thin;
+}
+
+.ant-select-selection-item {
+  font-size: 12px;
+}
