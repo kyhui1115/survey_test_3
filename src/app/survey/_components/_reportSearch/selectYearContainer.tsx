@@ -4,7 +4,7 @@ import { Select } from "antd";
 
 export default function SelectYearContainer() {
   const { data: surveyYears } = useGetSurveyYears();
-  const { year, setYear } = useSubjectStore();
+  const { setYear } = useSubjectStore();
   const handleChange = (value: string) => {
     setYear(value);
   };
