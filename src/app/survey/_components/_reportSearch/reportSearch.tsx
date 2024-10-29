@@ -6,8 +6,11 @@ import SubjectTableContainer from "./subjectTableContainer";
 
 export default function ReportSearch() {
   return (
-    <Col className="bg-white h-full w-full" span={4}>
-      <div className="border-r border-r-border-gray w-full h-full flex flex-col pr-6">
+    <Col
+      className="bg-white h-full w-full border-r pr-6 border-r-border-gray"
+      span={4}
+    >
+      <div className="w-full h-full flex flex-col">
         <SelectYearContainer />
         <SubjectTableContainer />
       </div>

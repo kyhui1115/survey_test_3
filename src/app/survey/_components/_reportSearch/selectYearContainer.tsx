@@ -1,10 +1,12 @@
 import useGetSurveyYears from "@/_api/_query/useGetSurveyYears";
+import useSubjectStore from "@/_store/subject";
 import { Select } from "antd";
 
 export default function SelectYearContainer() {
   const { data: surveyYears } = useGetSurveyYears();
+  const { year, setYear } = useSubjectStore();
   const handleChange = (value: string) => {
-    console.log(`selected ${value}`);
+    setYear(value);
   };
 
   const options = surveyYears?.map((survey) => ({
@@ -13,7 +15,7 @@ export default function SelectYearContainer() {
   }));
 
   return (
-    <div className="border border-border-gray rounded-md w-full h-10 flex items-center justify-between px-2">
+    <div className="border border-border-gray rounded-md w-full h-10 flex items-center justify-between px-2 shadow-container">
       <span className="font-semibold text-xs">설문응답년도</span>
       <Select
         defaultValue="2024"
