@@ -2,7 +2,7 @@ import { Table } from "antd";
 import TotalCount from "./totalCount";
 import useGetSubjects from "@/_api/_query/useGetSubject";
 import useSubjectStore from "@/_store/subject";
-import Spinner from "../_common/spineer";
+import Spinner from "../_common/spinner";
 
 export default function SubjectTableContainer() {
   const { year, id, setId } = useSubjectStore();
