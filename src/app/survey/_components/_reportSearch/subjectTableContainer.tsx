@@ -37,7 +37,7 @@ export default function SubjectTableContainer() {
 
   if (isLoading) {
     return (
-      <div className="border border-border-gray h-full mt-6 rounded-md pt-4 px-2 shadow-container">
+      <div className="border border-border-gray h-full mt-4 rounded-md pt-3 px-2 shadow-container">
         <Spinner />
       </div>
     );
