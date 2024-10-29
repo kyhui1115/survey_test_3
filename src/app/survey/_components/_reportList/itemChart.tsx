@@ -20,7 +20,7 @@ export default function ItemChart({ tables, tableHeight }: props) {
         <YAxis
           type="category"
           dataKey="name"
-          width={100}
+          width={90}
           tick={{ fontSize: 12, fontWeight: 600 }}
         />
         <Tooltip />
