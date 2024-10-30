@@ -28,7 +28,7 @@ export default function ItemChart({ tables, tableHeight }: props) {
           dataKey="score"
           fill="#1777ff"
           activeBar={<Rectangle fill="#0d3b80 " stroke="#0d3b80" />}
-          isAnimationActive={false}
+          animationEasing="ease-in-out"
         />
       </BarChart>
     </div>
