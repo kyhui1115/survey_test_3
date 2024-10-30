@@ -1,6 +1,6 @@
 import { table } from "@/_api/_query/useGetReport";
 import { ConfigProvider, Table, TableProps } from "antd";
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 
 interface props {
   tables: table[];
@@ -18,7 +18,9 @@ export default function ItemTable({ tables, setTableHeight }: props) {
 
   useEffect(() => {
     if (tableRef.current) {
-      setTableHeight(tableRef.current.clientHeight);
+      const height = tableRef.current.clientHeight;
+
+      setTableHeight(height);
     }
   }, [tables, setTableHeight]);
 
@@ -68,7 +70,7 @@ export default function ItemTable({ tables, setTableHeight }: props) {
           pagination={false}
           rowKey="id"
           bordered={true}
-          className="w-72 ml-6"
+          className="w-72"
           size="small"
         />
       </ConfigProvider>

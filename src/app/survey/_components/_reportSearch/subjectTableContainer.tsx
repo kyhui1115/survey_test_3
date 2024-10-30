@@ -37,14 +37,14 @@ export default function SubjectTableContainer() {
 
   if (isLoading) {
     return (
-      <div className="border border-border-gray h-full mt-4 rounded-md pt-3 px-2 shadow-container">
+      <div className="border border-border-gray h-full mt-4 rounded-md pt-3 px-2 shadow-container bg-gray-50">
         <Spinner />
       </div>
     );
   }
 
   return (
-    <div className="border border-border-gray h-full mt-4 rounded-md pt-3 px-2 shadow-container">
+    <div className="border border-border-gray h-full mt-4 rounded-md pt-3 px-2 shadow-container bg-gray-50">
       <div className="flex items-center mb-3 justify-between">
         <span className="font-semibold text-xs ml-1">대상자목록</span>
         <TotalCount count={subject?.[0].nums.length} />

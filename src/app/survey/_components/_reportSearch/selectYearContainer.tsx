@@ -15,7 +15,7 @@ export default function SelectYearContainer() {
   }));
 
   return (
-    <div className="border border-border-gray rounded-md w-full h-10 flex items-center justify-between px-2 shadow-container">
+    <div className="border border-border-gray rounded-md w-full h-10 flex items-center justify-between px-2 shadow-container bg-gray-50">
       <span className="font-semibold text-xs">설문응답년도</span>
       <Select
         defaultValue="2024"

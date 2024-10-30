@@ -4,7 +4,6 @@ import { useState } from "react";
 import { table } from "@/_api/_query/useGetReport";
 import ItemTable from "./itemTable";
 import ItemChart from "./itemChart";
-import useDelayChart from "@/_hooks/useDelayChart";
 
 interface props {
   no: number;
@@ -15,16 +14,14 @@ interface props {
 export default function ReportItem({ no, title, tables }: props) {
   const [tableHeight, setTableHeight] = useState(0);
 
-  const showChart = useDelayChart(tables);
-
   return (
-    <div className="relative flex border-b border-border-gray">
-      <span className="absolute font-semibold top-4">
+    <div className="relative flex border border-border-gray mt-6 p-2 rounded-md bg-white shadow-container">
+      <span className="absolute font-semibold top-4 left-4">
         {no}. {title}
       </span>
-      <div className="flex w-full h-full pt-14 pb-10">
+      <div className="flex w-full h-full pt-12 pb-8">
         <ItemTable tables={tables} setTableHeight={setTableHeight} />
-        {showChart && <ItemChart tables={tables} tableHeight={tableHeight} />}
+        <ItemChart tables={tables} tableHeight={tableHeight} />
       </div>
     </div>
   );

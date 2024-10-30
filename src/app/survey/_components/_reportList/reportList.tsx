@@ -14,7 +14,7 @@ export default function ReportList() {
   if (isLoading) {
     return (
       <Col className="pl-6 h-full" span={20}>
-        <div className="border-y border-l border-border-gray rounded-l-md w-full h-full bg-white overflow-y-scroll px-6 shadow-container">
+        <div className="border border-border-gray rounded-l-md w-full h-full bg-gray-50 overflow-y-scroll px-6 shadow-container pb-6">
           <Spinner />
         </div>
       </Col>
@@ -23,7 +23,8 @@ export default function ReportList() {
 
   return (
     <Col className="pl-6 h-full" span={20}>
-      <div className="border border-border-gray rounded-l-md w-full h-full bg-white overflow-y-scroll px-6 shadow-container">
+      <div className="border border-border-gray rounded-l-md w-full h-full bg-gray-50 overflow-y-scroll px-6 shadow-container pb-6 pt-3">
+        <span className="font-semibold text-lg">설문보고서</span>
         {surveys?.length === 0 ? (
           <EmptyMessage image="default" />
         ) : (
