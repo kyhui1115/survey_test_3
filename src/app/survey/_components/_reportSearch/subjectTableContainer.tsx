@@ -53,6 +53,7 @@ export default function SubjectTableContainer() {
         theme={{
           components: {
             Table: {
+              borderColor: "#9ba3af",
               rowHoverBg: "rgb(239 246 255)",
             },
           },
