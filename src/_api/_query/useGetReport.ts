@@ -28,6 +28,7 @@ const useGetReport = (id: number): UseQueryResult<survey[], Error> => {
   return useQuery<survey[], Error>({
     queryKey: ["reports", id],
     queryFn: () => getReport(id),
+    staleTime: 1000 * 60 * 5,
   });
 };
 

@@ -21,6 +21,7 @@ const useGetSubject = (year: string): UseQueryResult<subject[], Error> => {
   return useQuery<subject[], Error>({
     queryKey: ["subjects", year],
     queryFn: () => getSubject(year),
+    staleTime: 1000 * 60 * 5,
   });
 };
 

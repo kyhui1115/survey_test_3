@@ -15,6 +15,7 @@ const useGetSurveyYears = (): UseQueryResult<surveyYear[], Error> => {
   return useQuery<surveyYear[], Error>({
     queryKey: ["surveyYears"],
     queryFn: getSurveyYears,
+    staleTime: 1000 * 60 * 5,
   });
 };
 
