@@ -1,4 +1,4 @@
-import { Layout, Row } from "antd";
+import { Row } from "antd";
 
 interface props {
   children: React.ReactNode;
