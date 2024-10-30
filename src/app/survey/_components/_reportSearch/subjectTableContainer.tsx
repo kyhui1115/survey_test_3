@@ -64,7 +64,7 @@ export default function SubjectTableContainer() {
             },
           };
         }}
-        rowClassName={(record) => (record.id === id ? "bg-blue-300" : "")}
+        rowClassName={(record) => (record.id === id ? "bg-blue-200" : "")}
       />
     </div>
   );

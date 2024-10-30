@@ -26,8 +26,8 @@ export default function ItemChart({ tables, tableHeight }: props) {
         <Tooltip />
         <Bar
           dataKey="score"
-          fill="#1777ff"
-          activeBar={<Rectangle fill="#0d3b80 " stroke="#0d3b80" />}
+          fill="rgb(59 130 246)"
+          activeBar={<Rectangle fill="rgb(37 99 235)" />}
           animationEasing="ease-in-out"
         />
       </BarChart>
