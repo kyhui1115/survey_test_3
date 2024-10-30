@@ -10,20 +10,15 @@ interface props {
   no: number;
   title: string;
   tables: table[];
-  lastNo: number;
 }
 
-export default function ReportItem({ no, title, tables, lastNo }: props) {
+export default function ReportItem({ no, title, tables }: props) {
   const [tableHeight, setTableHeight] = useState(0);
 
   const showChart = useDelayChart(tables);
 
   return (
-    <div
-      className={`relative flex border-b border-border-gray ${
-        no === lastNo ? "" : "border-b border-border-gray"
-      }`}
-    >
+    <div className="relative flex border-b border-border-gray">
       <span className="absolute font-semibold top-4">
         {no}. {title}
       </span>

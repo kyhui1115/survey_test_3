@@ -33,7 +33,6 @@ export default function ReportList() {
               no={idx + 1}
               title={report.title}
               tables={report.tables}
-              lastNo={surveys[0].reports.length}
             />
           ))
         )}
