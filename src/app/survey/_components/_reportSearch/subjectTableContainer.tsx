@@ -1,4 +1,4 @@
-import { Table } from "antd";
+import { ConfigProvider, Table } from "antd";
 import TotalCount from "./totalCount";
 import useGetSubjects from "@/_api/_query/useGetSubject";
 import useSubjectStore from "@/_store/subject";
@@ -49,23 +49,33 @@ export default function SubjectTableContainer() {
         <span className="font-semibold text-xs ml-1">대상자목록</span>
         <TotalCount count={subject?.[0].nums.length} />
       </div>
-      <Table
-        size="small"
-        pagination={false}
-        columns={columns}
-        dataSource={dataSource}
-        rowKey="id"
-        bordered={true}
-        scroll={{ y: 725 }}
-        onRow={(data) => {
-          return {
-            onClick: () => {
-              setId(data.id);
+      <ConfigProvider
+        theme={{
+          components: {
+            Table: {
+              rowHoverBg: "rgb(239 246 255)",
             },
-          };
+          },
         }}
-        rowClassName={(record) => (record.id === id ? "bg-blue-200" : "")}
-      />
+      >
+        <Table
+          size="small"
+          pagination={false}
+          columns={columns}
+          dataSource={dataSource}
+          rowKey="id"
+          bordered={true}
+          scroll={{ y: 725 }}
+          onRow={(data) => {
+            return {
+              onClick: () => {
+                setId(data.id);
+              },
+            };
+          }}
+          rowClassName={(record) => (record.id === id ? "bg-blue-200" : "")}
+        />
+      </ConfigProvider>
     </div>
   );
 }

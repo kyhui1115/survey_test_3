@@ -8,7 +8,7 @@ interface props {
 
 export default function ItemChart({ tables, tableHeight }: props) {
   return (
-    <div className="w-1/3 justify-center items-center flex h-full border-r border-border-gray pr-10  pt-2">
+    <div className="w-1/3 justify-center items-center flex h-full border-r border-border-gray pr-10 pt-2">
       <BarChart
         width={450}
         height={tableHeight}
@@ -26,7 +26,7 @@ export default function ItemChart({ tables, tableHeight }: props) {
         <Tooltip />
         <Bar
           dataKey="score"
-          fill="rgb(59 130 246)"
+          fill="rgb(96 165 250)"
           activeBar={<Rectangle fill="rgb(37 99 235)" />}
           animationEasing="ease-in-out"
         />

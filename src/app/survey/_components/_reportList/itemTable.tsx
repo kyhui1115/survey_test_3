@@ -57,6 +57,7 @@ export default function ItemTable({ tables, setTableHeight }: props) {
           components: {
             Table: {
               borderColor: "#9ba3af",
+              rowHoverBg: "rgb(239 246 255)",
             },
           },
         }}
