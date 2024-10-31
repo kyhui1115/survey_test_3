@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://tidy-ripple-plantain.glitch.me",
+  baseURL: "https://tested-puzzled-poppy.glitch.me",
 });
 
 export default api;
