@@ -1,24 +1,32 @@
-import useGetSurveyYears from "@/_api/_query/useGetSurveyYears";
-import useSubjectStore from "@/_store/subject";
+import useGetYears from "@/_api/_query/useGetYears";
+import useYearIdStore from "@/_store/yearId";
 import { Select } from "antd";
+import { useEffect } from "react";
 
 export default function SelectYearContainer() {
-  const { data: surveyYears } = useGetSurveyYears();
-  const { setYear } = useSubjectStore();
-  const handleChange = (value: string) => {
-    setYear(value);
+  const { data: years } = useGetYears();
+  const { setYearId } = useYearIdStore();
+
+  const handleChange = (value: number) => {
+    setYearId(value);
   };
 
-  const options = surveyYears?.map((survey) => ({
-    label: <span className="text-xs">{survey.year}</span>,
-    value: survey.year,
+  useEffect(() => {
+    if (years) {
+      setYearId(years[0].id);
+    }
+  }, [years]);
+
+  const options = years?.map((year) => ({
+    label: <span className="text-xs">{year.year}</span>,
+    value: year.id,
   }));
 
   return (
     <div className="border border-border-gray rounded-md w-full h-10 flex items-center justify-between px-2 shadow-container bg-gray-50">
       <span className="font-semibold text-xs">설문응답년도</span>
       <Select
-        defaultValue="2024"
+        defaultValue={2024}
         onChange={handleChange}
         options={options}
         size="small"

@@ -1,9 +1,9 @@
-import { table } from "@/_api/_query/useGetReport";
+import { table } from "@/_api/_query/useGetTables";
 import useDelayChart from "@/_hooks/useDelayChart";
 import { Bar, BarChart, Rectangle, Tooltip, XAxis, YAxis } from "recharts";
 
 interface props {
-  tables: table[];
+  tables: table[] | undefined;
   tableHeight: number;
 }
 
@@ -20,7 +20,7 @@ export default function ItemChart({ tables, tableHeight }: props) {
             data={tables}
             layout="vertical"
           >
-            <XAxis type="number" domain={[0, tables[0].total]} />
+            <XAxis type="number" domain={[0, tables?.[0].total as number]} />
             <YAxis
               type="category"
               dataKey="name"

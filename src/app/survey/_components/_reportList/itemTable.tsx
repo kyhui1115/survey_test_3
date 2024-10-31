@@ -1,9 +1,9 @@
-import { table } from "@/_api/_query/useGetReport";
+import { table } from "@/_api/_query/useGetTables";
 import { ConfigProvider, Table, TableProps } from "antd";
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 interface props {
-  tables: table[];
+  tables: table[] | undefined;
   setTableHeight: React.Dispatch<React.SetStateAction<number>>;
 }
 

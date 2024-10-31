@@ -1,18 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import { table } from "@/_api/_query/useGetReport";
+
 import ItemTable from "./itemTable";
 import ItemChart from "./itemChart";
+import useGetTables from "@/_api/_query/useGetTables";
 
 interface props {
   no: number;
+  id: number;
   title: string;
-  tables: table[];
 }
 
-export default function ReportItem({ no, title, tables }: props) {
+export default function ReportItem({ no, id, title }: props) {
   const [tableHeight, setTableHeight] = useState(0);
+
+  const { data: tables } = useGetTables(id);
 
   return (
     <div className="relative flex border border-border-gray mt-4 p-2 rounded-md bg-white hover:shadow-container duration-500">

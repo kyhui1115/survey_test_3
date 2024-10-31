@@ -1,365 +1,309 @@
 {
-  "surveyYears": [
-    { "id": 1, "year": "2024" },
-    { "id": 2, "year": "2023" },
-    { "id": 3, "year": "2022" },
-    { "id": 4, "year": "2021" },
-    { "id": 5, "year": "2020" },
-    { "id": 6, "year": "2019" }
+  "years": [
+    { "id": 6, "year": 2024 },
+    { "id": 5, "year": 2023 },
+    { "id": 4, "year": 2022 },
+    { "id": 3, "year": 2021 },
+    { "id": 2, "year": 2020 },
+    { "id": 1, "year": 2019 }
   ],
+
   "subjects": [
+    { "id": 1, "yearId": 2, "subjectNum": 1 },
+    { "id": 2, "yearId": 2, "subjectNum": 2 },
+    { "id": 3, "yearId": 2, "subjectNum": 3 },
+    { "id": 4, "yearId": 2, "subjectNum": 4 },
+    { "id": 5, "yearId": 2, "subjectNum": 5 },
+    { "id": 6, "yearId": 2, "subjectNum": 6 },
+    { "id": 7, "yearId": 2, "subjectNum": 7 },
+    { "id": 8, "yearId": 2, "subjectNum": 8 },
+    { "id": 9, "yearId": 2, "subjectNum": 9 },
+    { "id": 10, "yearId": 2, "subjectNum": 10 },
+    { "id": 11, "yearId": 3, "subjectNum": 11 },
+    { "id": 12, "yearId": 3, "subjectNum": 12 },
+    { "id": 13, "yearId": 3, "subjectNum": 13 },
+    { "id": 14, "yearId": 3, "subjectNum": 14 },
+    { "id": 15, "yearId": 3, "subjectNum": 15 },
+    { "id": 16, "yearId": 3, "subjectNum": 16 },
+    { "id": 17, "yearId": 3, "subjectNum": 17 },
+    { "id": 18, "yearId": 3, "subjectNum": 18 },
+    { "id": 19, "yearId": 3, "subjectNum": 19 },
+    { "id": 20, "yearId": 3, "subjectNum": 20 },
+    { "id": 21, "yearId": 4, "subjectNum": 21 },
+    { "id": 22, "yearId": 4, "subjectNum": 22 },
+    { "id": 23, "yearId": 4, "subjectNum": 23 },
+    { "id": 24, "yearId": 4, "subjectNum": 24 },
+    { "id": 25, "yearId": 4, "subjectNum": 25 },
+    { "id": 26, "yearId": 4, "subjectNum": 26 },
+    { "id": 27, "yearId": 4, "subjectNum": 27 },
+    { "id": 28, "yearId": 4, "subjectNum": 28 },
+    { "id": 29, "yearId": 4, "subjectNum": 29 },
+    { "id": 30, "yearId": 4, "subjectNum": 30 },
+    { "id": 31, "yearId": 5, "subjectNum": 31 },
+    { "id": 32, "yearId": 5, "subjectNum": 32 },
+    { "id": 33, "yearId": 5, "subjectNum": 33 },
+    { "id": 34, "yearId": 5, "subjectNum": 34 },
+    { "id": 35, "yearId": 5, "subjectNum": 35 },
+    { "id": 36, "yearId": 5, "subjectNum": 36 },
+    { "id": 37, "yearId": 5, "subjectNum": 37 },
+    { "id": 38, "yearId": 5, "subjectNum": 38 },
+    { "id": 39, "yearId": 5, "subjectNum": 39 },
+    { "id": 40, "yearId": 5, "subjectNum": 40 },
+    { "id": 41, "yearId": 6, "subjectNum": 41 },
+    { "id": 42, "yearId": 6, "subjectNum": 42 },
+    { "id": 43, "yearId": 6, "subjectNum": 43 },
+    { "id": 44, "yearId": 6, "subjectNum": 44 },
+    { "id": 45, "yearId": 6, "subjectNum": 45 },
+    { "id": 46, "yearId": 6, "subjectNum": 46 },
+    { "id": 47, "yearId": 6, "subjectNum": 47 },
+    { "id": 48, "yearId": 6, "subjectNum": 48 },
+    { "id": 49, "yearId": 6, "subjectNum": 49 },
+    { "id": 50, "yearId": 6, "subjectNum": 50 },
+    { "id": 51, "yearId": 6, "subjectNum": 51 },
+    { "id": 52, "yearId": 6, "subjectNum": 52 },
+    { "id": 53, "yearId": 6, "subjectNum": 53 },
+    { "id": 54, "yearId": 6, "subjectNum": 54 },
+    { "id": 55, "yearId": 6, "subjectNum": 55 },
+    { "id": 56, "yearId": 6, "subjectNum": 56 },
+    { "id": 57, "yearId": 6, "subjectNum": 57 },
+    { "id": 58, "yearId": 6, "subjectNum": 58 },
+    { "id": 59, "yearId": 6, "subjectNum": 59 },
+    { "id": 60, "yearId": 6, "subjectNum": 60 },
+    { "id": 61, "yearId": 6, "subjectNum": 61 },
+    { "id": 62, "yearId": 6, "subjectNum": 62 },
+    { "id": 63, "yearId": 6, "subjectNum": 63 },
+    { "id": 64, "yearId": 6, "subjectNum": 64 },
+    { "id": 65, "yearId": 6, "subjectNum": 65 },
+    { "id": 66, "yearId": 6, "subjectNum": 66 },
+    { "id": 67, "yearId": 6, "subjectNum": 67 },
+    { "id": 68, "yearId": 6, "subjectNum": 68 },
+    { "id": 69, "yearId": 6, "subjectNum": 69 },
+    { "id": 70, "yearId": 6, "subjectNum": 70 },
+    { "id": 71, "yearId": 6, "subjectNum": 71 },
+    { "id": 72, "yearId": 6, "subjectNum": 72 },
+    { "id": 73, "yearId": 6, "subjectNum": 73 },
+    { "id": 74, "yearId": 6, "subjectNum": 74 },
+    { "id": 75, "yearId": 6, "subjectNum": 75 },
+    { "id": 76, "yearId": 6, "subjectNum": 76 },
+    { "id": 77, "yearId": 6, "subjectNum": 77 },
+    { "id": 78, "yearId": 6, "subjectNum": 78 },
+    { "id": 79, "yearId": 6, "subjectNum": 79 },
+    { "id": 80, "yearId": 6, "subjectNum": 80 }
+  ],
+
+  "reports": [
+    { "id": 1, "subjectId": 41, "title": "데이터 발생을 위한 제조 환경 수준" },
+    { "id": 2, "subjectId": 41, "title": "데이터 품질 수준" },
+    { "id": 3, "subjectId": 41, "title": "데이터 활용 및 데이터 역량 수준" },
+    { "id": 4, "subjectId": 41, "title": "전체 평가항목 수준" },
+    { "id": 5, "subjectId": 41, "title": "데이터 활용 성과 수준" },
+    { "id": 6, "subjectId": 42, "title": "전체 평가항목 수준" },
+    { "id": 7, "subjectId": 42, "title": "데이터 활용 성과 수준" }
+  ],
+
+  "tables": [
     {
       "id": 1,
-      "year": "2024",
-      "nums": [
-        { "id": 51, "num": 11 },
-        { "id": 52, "num": 12 },
-        { "id": 53, "num": 13 },
-        { "id": 54, "num": 14 },
-        { "id": 55, "num": 15 },
-        { "id": 56, "num": 16 },
-        { "id": 57, "num": 17 },
-        { "id": 58, "num": 18 },
-        { "id": 59, "num": 19 },
-        { "id": 60, "num": 20 },
-        { "id": 61, "num": 21 },
-        { "id": 62, "num": 22 },
-        { "id": 63, "num": 23 },
-        { "id": 64, "num": 24 },
-        { "id": 65, "num": 25 },
-        { "id": 66, "num": 26 },
-        { "id": 67, "num": 27 },
-        { "id": 68, "num": 28 },
-        { "id": 69, "num": 39 },
-        { "id": 70, "num": 40 },
-        { "id": 71, "num": 41 },
-        { "id": 72, "num": 42 },
-        { "id": 73, "num": 43 },
-        { "id": 74, "num": 44 },
-        { "id": 75, "num": 45 },
-        { "id": 76, "num": 46 },
-        { "id": 77, "num": 47 },
-        { "id": 78, "num": 48 },
-        { "id": 79, "num": 49 },
-        { "id": 80, "num": 50 },
-        { "id": 81, "num": 51 },
-        { "id": 82, "num": 52 },
-        { "id": 83, "num": 53 },
-        { "id": 84, "num": 54 },
-        { "id": 85, "num": 55 },
-        { "id": 86, "num": 56 },
-        { "id": 87, "num": 57 },
-        { "id": 88, "num": 58 },
-        { "id": 89, "num": 59 },
-        { "id": 90, "num": 60 },
-        { "id": 91, "num": 61 },
-        { "id": 92, "num": 62 },
-        { "id": 93, "num": 63 },
-        { "id": 94, "num": 64 },
-        { "id": 95, "num": 65 },
-        { "id": 96, "num": 66 },
-        { "id": 97, "num": 67 },
-        { "id": 98, "num": 68 },
-        { "id": 99, "num": 69 },
-        { "id": 100, "num": 70 }
-      ]
+      "reportId": 1,
+      "name": "공정수준",
+      "score": 42,
+      "total": 100
     },
     {
       "id": 2,
-      "year": "2023",
-      "nums": [
-        { "id": 41, "num": 111 },
-        { "id": 42, "num": 112 },
-        { "id": 43, "num": 113 },
-        { "id": 44, "num": 114 },
-        { "id": 45, "num": 115 },
-        { "id": 46, "num": 116 },
-        { "id": 47, "num": 117 },
-        { "id": 48, "num": 118 },
-        { "id": 49, "num": 119 },
-        { "id": 50, "num": 120 }
-      ]
+      "reportId": 1,
+      "name": "공통",
+      "score": 60,
+      "total": 100
     },
     {
       "id": 3,
-      "year": "2022",
-      "nums": [
-        { "id": 31, "num": 1111 },
-        { "id": 32, "num": 1112 },
-        { "id": 33, "num": 1113 },
-        { "id": 34, "num": 1114 },
-        { "id": 35, "num": 1115 },
-        { "id": 36, "num": 1116 },
-        { "id": 37, "num": 1117 },
-        { "id": 38, "num": 1118 },
-        { "id": 39, "num": 1119 },
-        { "id": 40, "num": 1120 }
-      ]
+      "reportId": 2,
+      "name": "계획",
+      "score": 90,
+      "total": 100
     },
     {
       "id": 4,
-      "year": "2021",
-      "nums": [
-        { "id": 21, "num": 11111 },
-        { "id": 22, "num": 11112 },
-        { "id": 23, "num": 11113 },
-        { "id": 24, "num": 11114 },
-        { "id": 25, "num": 11115 },
-        { "id": 26, "num": 11116 },
-        { "id": 27, "num": 11117 },
-        { "id": 28, "num": 11118 },
-        { "id": 29, "num": 11119 },
-        { "id": 30, "num": 11120 }
-      ]
+      "reportId": 2,
+      "name": "구축",
+      "score": 100,
+      "total": 100
     },
     {
       "id": 5,
-      "year": "2020",
-      "nums": [
-        { "id": 11, "num": 111111 },
-        { "id": 12, "num": 111112 },
-        { "id": 13, "num": 111113 },
-        { "id": 14, "num": 111114 },
-        { "id": 15, "num": 111115 },
-        { "id": 16, "num": 111116 },
-        { "id": 17, "num": 111117 },
-        { "id": 18, "num": 111118 },
-        { "id": 19, "num": 111119 },
-        { "id": 20, "num": 111120 }
-      ]
+      "reportId": 2,
+      "name": "운영",
+      "score": 100,
+      "total": 100
     },
     {
       "id": 6,
-      "year": "2019",
-      "nums": []
-    }
-  ],
-  "surveys": [
-    {
-      "id": 51,
-      "reports": [
-        {
-          "id": 1,
-          "title": "데이터 발생을 위한 제조 환경 수준",
-          "tables": [
-            {
-              "id": 1,
-              "name": "공정수준",
-              "score": 42,
-              "total": 100
-            },
-            {
-              "id": 2,
-              "name": "공통",
-              "score": 60,
-              "total": 100
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "title": "데이터 품질 수준",
-          "tables": [
-            {
-              "id": 1,
-              "name": "계획",
-              "score": 90,
-              "total": 100
-            },
-            {
-              "id": 2,
-              "name": "구축",
-              "score": 100,
-              "total": 100
-            },
-            {
-              "id": 3,
-              "name": "운영",
-              "score": 100,
-              "total": 100
-            },
-            {
-              "id": 4,
-              "name": "점검",
-              "score": 80,
-              "total": 100
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "title": "데이터 활용 및 데이터 역량 수준",
-          "tables": [
-            {
-              "id": 1,
-              "name": "활용 지원",
-              "score": 50,
-              "total": 100
-            },
-            {
-              "id": 2,
-              "name": "활용 범위",
-              "score": 70,
-              "total": 100
-            },
-            {
-              "id": 3,
-              "name": "분석 인프라",
-              "score": 80,
-              "total": 100
-            },
-            {
-              "id": 4,
-              "name": "데이터 분석 전문 인력",
-              "score": 80,
-              "total": 100
-            },
-            {
-              "id": 5,
-              "name": "시스템 운영 및 관리",
-              "score": 85,
-              "total": 100
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "title": "전체 평가항목 수준",
-          "tables": [
-            {
-              "id": 1,
-              "name": "항목1",
-              "score": 50,
-              "total": 100
-            },
-            {
-              "id": 2,
-              "name": "항목2",
-              "score": 70,
-              "total": 100
-            },
-            {
-              "id": 3,
-              "name": "항목3",
-              "score": 80,
-              "total": 100
-            },
-            {
-              "id": 4,
-              "name": "항목4",
-              "score": 80,
-              "total": 100
-            },
-            {
-              "id": 5,
-              "name": "항목5",
-              "score": 85,
-              "total": 100
-            }
-          ]
-        },
-        {
-          "id": 5,
-          "title": "데이터 활용 성과 수준",
-          "tables": [
-            {
-              "id": 1,
-              "name": "생산",
-              "score": 80,
-              "total": 100
-            },
-            {
-              "id": 2,
-              "name": "품질",
-              "score": 100,
-              "total": 100
-            },
-            {
-              "id": 3,
-              "name": "원가",
-              "score": 100,
-              "total": 100
-            },
-            {
-              "id": 4,
-              "name": "납기",
-              "score": 90,
-              "total": 100
-            }
-          ]
-        }
-      ]
+      "reportId": 2,
+      "name": "점검",
+      "score": 80,
+      "total": 100
     },
     {
-      "id": 52,
-      "reports": [
-        {
-          "id": 1,
-          "title": "전체 평가항목 수준",
-          "tables": [
-            {
-              "id": 1,
-              "name": "항목1",
-              "score": 50,
-              "total": 100
-            },
-            {
-              "id": 2,
-              "name": "항목2",
-              "score": 70,
-              "total": 100
-            },
-            {
-              "id": 3,
-              "name": "항목3",
-              "score": 80,
-              "total": 100
-            },
-            {
-              "id": 4,
-              "name": "항목4",
-              "score": 80,
-              "total": 100
-            },
-            {
-              "id": 5,
-              "name": "항목5",
-              "score": 85,
-              "total": 100
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "title": "데이터 활용 성과 수준",
-          "tables": [
-            {
-              "id": 1,
-              "name": "생산",
-              "score": 80,
-              "total": 100
-            },
-            {
-              "id": 2,
-              "name": "품질",
-              "score": 100,
-              "total": 100
-            },
-            {
-              "id": 3,
-              "name": "원가",
-              "score": 100,
-              "total": 100
-            },
-            {
-              "id": 4,
-              "name": "납기",
-              "score": 90,
-              "total": 100
-            }
-          ]
-        }
-      ]
+      "id": 7,
+      "reportId": 3,
+      "name": "활용 지원",
+      "score": 50,
+      "total": 100
+    },
+    {
+      "id": 8,
+      "reportId": 3,
+      "name": "활용 범위",
+      "score": 70,
+      "total": 100
+    },
+    {
+      "id": 9,
+      "reportId": 3,
+      "name": "분석 인프라",
+      "score": 80,
+      "total": 100
+    },
+    {
+      "id": 10,
+      "reportId": 3,
+      "name": "데이터 분석 전문 인력",
+      "score": 80,
+      "total": 100
+    },
+    {
+      "id": 11,
+      "reportId": 3,
+      "name": "시스템 운영 및 관리",
+      "score": 85,
+      "total": 100
+    },
+    {
+      "id": 12,
+      "reportId": 4,
+      "name": "항목1",
+      "score": 50,
+      "total": 100
+    },
+    {
+      "id": 13,
+      "reportId": 4,
+      "name": "항목2",
+      "score": 70,
+      "total": 100
+    },
+    {
+      "id": 14,
+      "reportId": 4,
+      "name": "항목3",
+      "score": 80,
+      "total": 100
+    },
+    {
+      "id": 15,
+      "reportId": 4,
+      "name": "항목4",
+      "score": 80,
+      "total": 100
+    },
+    {
+      "id": 16,
+      "reportId": 4,
+      "name": "항목5",
+      "score": 85,
+      "total": 100
+    },
+    {
+      "id": 17,
+      "reportId": 5,
+      "name": "생산",
+      "score": 80,
+      "total": 100
+    },
+    {
+      "id": 18,
+      "reportId": 5,
+      "name": "품질",
+      "score": 100,
+      "total": 100
+    },
+    {
+      "id": 19,
+      "reportId": 5,
+      "name": "원가",
+      "score": 100,
+      "total": 100
+    },
+    {
+      "id": 20,
+      "reportId": 5,
+      "name": "납기",
+      "score": 90,
+      "total": 100
+    },
+    {
+      "id": 21,
+      "reportId": 6,
+      "name": "항목1",
+      "score": 50,
+      "total": 100
+    },
+    {
+      "id": 22,
+      "reportId": 6,
+      "name": "항목2",
+      "score": 70,
+      "total": 100
+    },
+    {
+      "id": 23,
+      "reportId": 6,
+      "name": "항목3",
+      "score": 80,
+      "total": 100
+    },
+    {
+      "id": 24,
+      "reportId": 6,
+      "name": "항목4",
+      "score": 80,
+      "total": 100
+    },
+    {
+      "id": 25,
+      "reportId": 6,
+      "name": "항목5",
+      "score": 85,
+      "total": 100
+    },
+    {
+      "id": 26,
+      "reportId": 7,
+      "name": "생산",
+      "score": 80,
+      "total": 100
+    },
+    {
+      "id": 27,
+      "reportId": 7,
+      "name": "품질",
+      "score": 100,
+      "total": 100
+    },
+    {
+      "id": 28,
+      "reportId": 7,
+      "name": "원가",
+      "score": 100,
+      "total": 100
+    },
+    {
+      "id": 29,
+      "reportId": 7,
+      "name": "납기",
+      "score": 90,
+      "total": 100
     }
   ]
 }

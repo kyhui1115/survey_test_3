@@ -1,12 +1,15 @@
 import { ConfigProvider, Table } from "antd";
 import TotalCount from "./totalCount";
-import useGetSubjects from "@/_api/_query/useGetSubject";
-import useSubjectStore from "@/_store/subject";
+import useGetSubjects from "@/_api/_query/useGetSubjects";
+import useSubjectIdStore from "@/_store/subjectId";
 import Spinner from "../_common/spinner";
+import useYearIdStore from "@/_store/yearId";
 
 export default function SubjectTableContainer() {
-  const { year, id, setId } = useSubjectStore();
-  const { data: subject, isLoading } = useGetSubjects(year);
+  const { subjectId, setSubjectId } = useSubjectIdStore();
+  const { yearId } = useYearIdStore();
+
+  const { data: subject, isLoading } = useGetSubjects(yearId);
 
   const columns = [
     {
@@ -22,15 +25,15 @@ export default function SubjectTableContainer() {
       title: () => (
         <span className="flex justify-center text-xs">대상자번호</span>
       ),
-      dataIndex: "num",
-      key: "num",
+      dataIndex: "subjectNum",
+      key: "id",
       render: (text: string) => (
         <span className="flex justify-center text-xs">{text}</span>
       ),
     },
   ];
 
-  const dataSource = subject?.[0].nums.map((num, index) => ({
+  const dataSource = subject?.map((num, index) => ({
     ...num,
     index: index + 1,
   }));
@@ -47,7 +50,7 @@ export default function SubjectTableContainer() {
     <div className="border border-border-gray h-full mt-4 rounded-md pt-3 px-2 shadow-container bg-gray-50">
       <div className="flex items-center mb-3 justify-between">
         <span className="font-semibold text-xs ml-1">대상자목록</span>
-        <TotalCount count={subject?.[0].nums.length} />
+        <TotalCount count={subject?.length} />
       </div>
       <ConfigProvider
         theme={{
@@ -70,11 +73,13 @@ export default function SubjectTableContainer() {
           onRow={(data) => {
             return {
               onClick: () => {
-                setId(data.id);
+                setSubjectId(data.id);
               },
             };
           }}
-          rowClassName={(record) => (record.id === id ? "bg-blue-200" : "")}
+          rowClassName={(record) =>
+            record.id === subjectId ? "bg-blue-200" : ""
+          }
         />
       </ConfigProvider>
     </div>
