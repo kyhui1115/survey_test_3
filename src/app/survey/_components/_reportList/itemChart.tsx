@@ -30,6 +30,7 @@ export default function ItemChart({ tables, tableHeight }: props) {
             <Tooltip />
             <Bar
               dataKey="score"
+              name="점수"
               fill="rgb(96 165 250)"
               activeBar={<Rectangle fill="rgb(37 99 235)" />}
               animationEasing="ease-in-out"
