@@ -1,9 +1,13 @@
 import { Spin } from "antd";
 
-export default function Spinner() {
+interface props {
+  size?: "small" | "default" | "large";
+}
+
+export default function Spinner({ size = "large" }: props) {
   return (
     <div className="w-full h-full flex justify-center items-center">
-      <Spin size="large" />
+      <Spin size={size} />
     </div>
   );
 }
