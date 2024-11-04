@@ -1,4 +1,133 @@
 {
+  "nav-hd": [
+    {
+      "id": 1,
+
+      "label": "설문조사",
+      "link": "/survey"
+    },
+    {
+      "id": 2,
+
+      "label": "nav-hd-2",
+      "link": "/nav-hd-2"
+    },
+    {
+      "id": 3,
+
+      "label": "nav-hd-3",
+      "link": "/nav-hd-3"
+    },
+    {
+      "id": 4,
+
+      "label": "nav-hd-4",
+      "link": "/nav-hd-4"
+    }
+  ],
+
+  "nav-sd": [
+    {
+      "id": 1,
+
+      "nav-hd-id": 1,
+      "label": "보고서",
+      "link": "/survey/reports"
+    },
+    {
+      "id": 2,
+
+      "nav-hd-id": 1,
+      "label": "/survey/nav-sd-2",
+      "link": "/survey/nav-sd-2"
+    },
+    {
+      "id": 3,
+
+      "nav-hd-id": 1,
+      "label": "/survey/nav-sd-3",
+      "link": "/survey/nav-sd-3"
+    },
+    {
+      "id": 4,
+      "nav-hd-id": 1,
+      "label": "/survey/nav-sd-4",
+      "link": "/survey/nav-sd-4"
+    },
+    {
+      "id": 5,
+      "nav-hd-id": 2,
+      "label": "/nav-hd-2/nav-sd-1",
+      "link": "/nav-hd-2/nav-sd-1"
+    },
+    {
+      "id": 6,
+      "nav-hd-id": 2,
+      "label": "/nav-hd-2/nav-sd-2",
+      "link": "/nav-hd-2/nav-sd-2"
+    },
+    {
+      "id": 7,
+      "nav-hd-id": 2,
+      "label": "/nav-hd-2/nav-sd-3",
+      "link": "/nav-hd-2/nav-sd-3"
+    },
+    {
+      "id": 8,
+      "nav-hd-id": 2,
+      "label": "/nav-hd-2/nav-sd-4",
+      "link": "/nav-hd-2/nav-sd-4"
+    },
+    {
+      "id": 9,
+      "nav-hd-id": 3,
+      "label": "/nav-hd-3/nav-sd-1",
+      "link": "/nav-hd-3/nav-sd-1"
+    },
+    {
+      "id": 10,
+      "nav-hd-id": 3,
+      "label": "/nav-hd-3/nav-sd-2",
+      "link": "/nav-hd-3/nav-sd-2"
+    },
+    {
+      "id": 11,
+      "nav-hd-id": 3,
+      "label": "/nav-hd-3/nav-sd-3",
+      "link": "/nav-hd-3/nav-sd-3"
+    },
+    {
+      "id": 12,
+      "nav-hd-id": 3,
+      "label": "/nav-hd-3/nav-sd-4",
+      "link": "/nav-hd-3/nav-sd-4"
+    },
+    {
+      "id": 13,
+      "nav-hd-id": 4,
+      "label": "/nav-hd-4/nav-sd-1",
+      "link": "/nav-hd-4/nav-sd-1"
+    },
+    {
+      "id": 14,
+      "nav-hd-id": 4,
+      "label": "/nav-hd-4/nav-sd-2",
+      "link": "/nav-hd-4/nav-sd-2"
+    },
+    {
+      "id": 15,
+      "nav-hd-id": 4,
+      "label": "/nav-hd-4/nav-sd-3",
+      "link": "/nav-hd-4/nav-sd-3"
+    },
+    {
+      "id": 16,
+      "nav-hd-id": 4,
+      "label": "/nav-hd-4/nav-sd-4",
+      "link": "/nav-hd-4/nav-sd-4"
+    }
+  ],
+
   "years": [
     { "id": 6, "year": 2024 },
     { "id": 5, "year": 2023 },
