@@ -1,13 +1,11 @@
 import { ConfigProvider, Table } from "antd";
 import TotalCount from "./totalCount";
 import useGetSubjects from "@/_api/_query/useGetSubjects";
-import useSubjectIdStore from "@/_store/subjectId";
-import Spinner from "../_common/spinner";
-import useYearIdStore from "@/_store/yearId";
+import Spinner from "../../../../_components/spinner";
+import useIdStore from "@/_store/id";
 
 export default function SubjectTableContainer() {
-  const { subjectId, setSubjectId } = useSubjectIdStore();
-  const { yearId } = useYearIdStore();
+  const { yearId, subjectId, setSubjectId } = useIdStore();
 
   const { data: subject, isLoading } = useGetSubjects(yearId);
 
@@ -40,14 +38,14 @@ export default function SubjectTableContainer() {
 
   if (isLoading) {
     return (
-      <div className="border border-border-gray h-full mt-4 rounded-md pt-3 px-2 shadow-container bg-gray-50">
+      <div className="border border-border-gray h-full mt-4 rounded-md pt-3 px-2">
         <Spinner />
       </div>
     );
   }
 
   return (
-    <div className="border border-border-gray h-full mt-4 rounded-md pt-3 px-2 shadow-container bg-gray-50">
+    <div className="border border-border-gray h-full mt-4 rounded-md pt-3 px-2">
       <div className="flex items-center mb-3 justify-between">
         <span className="font-semibold text-xs ml-1">대상자목록</span>
         <TotalCount count={subject?.length} />
@@ -69,7 +67,7 @@ export default function SubjectTableContainer() {
           dataSource={dataSource}
           rowKey="id"
           bordered={true}
-          scroll={{ y: 725 }}
+          scroll={{ y: 600 }}
           onRow={(data) => {
             return {
               onClick: () => {

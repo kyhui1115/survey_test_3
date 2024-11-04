@@ -9,7 +9,7 @@ export default function Home() {
 
   useLayoutEffect(() => {
     if (auth) {
-      router.push("/reports");
+      router.push("/survey/reports");
     } else {
       router.push("/login");
     }

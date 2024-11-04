@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import type { Metadata } from "next";
-import { Layout } from "antd";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -10,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "survey",
-  description: "survey_report",
+  description: "survey",
 };
 
 export default function RootLayout({
@@ -20,11 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={inter.className}>
+      <body className={`w-screen h-screen ${inter.className}`}>
         <AntdRegistry>
-          <QueryProvider>
-            <Layout className="h-screen w-screen">{children}</Layout>
-          </QueryProvider>
+          <QueryProvider>{children}</QueryProvider>
         </AntdRegistry>
       </body>
     </html>

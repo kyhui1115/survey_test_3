@@ -1,11 +1,11 @@
 import useGetYears from "@/_api/_query/useGetYears";
-import useYearIdStore from "@/_store/yearId";
+import useIdStore from "@/_store/id";
 import { Select } from "antd";
 import { useEffect } from "react";
 
 export default function SelectYearContainer() {
   const { data: years } = useGetYears();
-  const { setYearId } = useYearIdStore();
+  const { setYearId } = useIdStore();
 
   const handleChange = (value: number) => {
     setYearId(value);
@@ -23,7 +23,7 @@ export default function SelectYearContainer() {
   }));
 
   return (
-    <div className="border border-border-gray rounded-md w-full h-10 flex items-center justify-between px-2 shadow-container bg-gray-50">
+    <div className="border border-border-gray rounded-md w-full h-10 flex items-center justify-between px-2">
       <span className="font-semibold text-xs">설문응답년도</span>
       <Select
         defaultValue={2024}
