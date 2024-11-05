@@ -2,6 +2,7 @@ import { Layout } from "antd";
 import Headers from "./_components/headers";
 import { Content, Footer } from "antd/es/layout/layout";
 import MenuSider from "./_components/menuSider";
+import Tab from "./_components/tab";
 
 interface props {
   children: React.ReactNode;
@@ -14,7 +15,8 @@ export default function SurveyLayout({ children }: props) {
       <Layout>
         <MenuSider />
         <Layout className="p-4">
-          <Content className="bg-white w-full p-4 h-10 border border-border-gray rounded-md">
+          <Tab />
+          <Content className="bg-white w-full p-4 h-10 border border-border-gray rounded-b-md">
             {children}
           </Content>
         </Layout>
