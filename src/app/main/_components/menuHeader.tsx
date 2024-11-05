@@ -1,12 +1,16 @@
 "use client";
 
 import useGetNavs from "@/_api/_query/useGetNavHd";
-import useIdStore from "@/_store/id";
-import { Menu } from "antd";
+import useNavIdStore from "@/_store/navId";
+import useReportIdStore from "@/_store/reportId";
+import useTabStore from "@/_store/tab";
+import { ConfigProvider, Menu } from "antd";
 import Link from "next/link";
 
 export default function MenuHeader() {
-  const { navHdId, setNavHdId } = useIdStore();
+  const { navHdId, setNavHdId, setNavSdId } = useNavIdStore();
+  const { setTabs } = useTabStore();
+  const { resetYearAndSubjectId } = useReportIdStore();
   const { data: navHd } = useGetNavs();
 
   const menuItems = navHd?.map((nav) => ({
@@ -16,15 +20,26 @@ export default function MenuHeader() {
 
   const menuHandler = (value: { key: string }) => {
     setNavHdId(value.key);
+    setTabs([]);
+    setNavSdId("0");
+    resetYearAndSubjectId();
   };
 
   return (
-    <Menu
-      mode="horizontal"
-      selectedKeys={[navHdId]}
-      items={menuItems}
-      className="w-96"
-      onClick={menuHandler}
-    />
+    <ConfigProvider
+      theme={{
+        components: {
+          Menu: {},
+        },
+      }}
+    >
+      <Menu
+        mode="horizontal"
+        selectedKeys={[navHdId]}
+        items={menuItems}
+        className="w-96 bg-slate-100"
+        onClick={menuHandler}
+      />
+    </ConfigProvider>
   );
 }

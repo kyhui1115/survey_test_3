@@ -5,10 +5,10 @@ import ReportItem from "./reportItem";
 import useGetReports from "@/_api/_query/useGetReports";
 import EmptyMessage from "../../../../../_components/emptyMessage";
 import Spinner from "../../../../../_components/spinner";
-import useIdStore from "@/_store/id";
+import useReportIdStore from "@/_store/reportId";
 
 export default function ReportList() {
-  const { subjectId } = useIdStore();
+  const { subjectId } = useReportIdStore();
   const { data: reports, isLoading } = useGetReports(subjectId);
 
   if (isLoading) {

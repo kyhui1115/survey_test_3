@@ -16,7 +16,7 @@ export default function MainLayout({ children }: props) {
         <MenuSider />
         <Layout>
           <Tab />
-          <Content className="bg-white w-full p-4 h-10">{children}</Content>
+          <Content className="bg-white w-full h-10 p-4">{children}</Content>
         </Layout>
       </Layout>
       <Footer className="flex justify-center items-center h-8 p-0 bg-slate-400 text-white">

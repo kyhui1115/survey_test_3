@@ -1,12 +1,12 @@
 import useGetYears from "@/_api/_query/useGetYears";
-import useIdStore from "@/_store/id";
+import useReportIdStore from "@/_store/reportId";
 import { Select } from "antd";
 import { useEffect, useState } from "react";
 
 export default function SelectYearContainer() {
   const [selectedYear, setSelectedYear] = useState<number>(0);
   const { data: years } = useGetYears();
-  const { yearId, setYearId } = useIdStore();
+  const { yearId, setYearId } = useReportIdStore();
 
   useEffect(() => {
     if (yearId === 0) {

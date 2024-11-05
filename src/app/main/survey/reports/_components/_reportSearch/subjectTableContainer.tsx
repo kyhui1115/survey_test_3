@@ -2,10 +2,10 @@ import { ConfigProvider, Table } from "antd";
 import TotalCount from "./totalCount";
 import useGetSubjects from "@/_api/_query/useGetSubjects";
 import Spinner from "../../../../../_components/spinner";
-import useIdStore from "@/_store/id";
+import useReportIdStore from "@/_store/reportId";
 
 export default function SubjectTableContainer() {
-  const { yearId, subjectId, setSubjectId } = useIdStore();
+  const { yearId, subjectId, setSubjectId } = useReportIdStore();
 
   const { data: subject, isLoading } = useGetSubjects(yearId);
 

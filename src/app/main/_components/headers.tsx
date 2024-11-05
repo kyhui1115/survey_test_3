@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 export default function Headers() {
   return (
-    <Header className="flex p-0 bg-white border-b border-border-gray">
+    <Header className="flex p-0 border-b border-border-gray bg-slate-100">
       <Logo />
       <MenuHeader />
     </Header>

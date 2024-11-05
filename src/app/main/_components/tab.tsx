@@ -1,17 +1,18 @@
 "use client";
 
-import useIdStore from "@/_store/id";
+import useNavIdStore from "@/_store/navId";
+import useReportIdStore from "@/_store/reportId";
 import useTabStore from "@/_store/tab";
 import { Tabs } from "antd";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 type targetKey = React.MouseEvent | React.KeyboardEvent | string;
 
 export default function Tab() {
   const router = useRouter();
   const { tabs, activeKey, setTabs, addTab, setActiveKey } = useTabStore();
-  const { setNavSdId, resetYearAndSubjectId } = useIdStore();
+  const { setNavSdId } = useNavIdStore();
+  const { resetYearAndSubjectId } = useReportIdStore();
 
   const onChange = (key: string) => {
     setActiveKey(key);
