@@ -37,7 +37,7 @@ export default function MenuHeader() {
         mode="horizontal"
         selectedKeys={[navHdId]}
         items={menuItems}
-        className="w-96 bg-slate-100"
+        className="w-96 bg-white"
         onClick={menuHandler}
       />
     </ConfigProvider>
