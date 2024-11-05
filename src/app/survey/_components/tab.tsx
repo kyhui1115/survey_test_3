@@ -62,17 +62,15 @@ export default function Tab() {
   };
 
   return (
-    <div className="h-10 flex border border-border-gray rounded-t-md">
-      <Tabs
-        hideAdd
-        onChange={onChange}
-        activeKey={activeKey}
-        type="editable-card"
-        onEdit={onEdit}
-        items={tabs}
-        tabBarGutter={0}
-        className="border-none"
-      />
-    </div>
+    <Tabs
+      hideAdd
+      onChange={onChange}
+      activeKey={activeKey}
+      type="editable-card"
+      onEdit={onEdit}
+      items={tabs}
+      tabBarGutter={0}
+      className="h-10 bg-slate-300"
+    />
   );
 }

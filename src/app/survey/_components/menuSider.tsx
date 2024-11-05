@@ -41,7 +41,7 @@ export default function MenuSider() {
       <Menu
         selectedKeys={[navSdId]}
         onClick={menuHandler}
-        className="h-full"
+        className="h-full border-r border-border-gray"
         items={menuItems}
       />
     </Sider>
