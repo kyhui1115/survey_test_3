@@ -2,17 +2,17 @@ import api from "@/_api";
 import { useQuery, UseQueryResult } from "@tanstack/react-query";
 
 interface nav {
-  id: number;
+  id: string;
   label: string;
   link: string;
 }
 
-const getNavSd = async (navHdId: number): Promise<nav[]> => {
+const getNavSd = async (navHdId: string): Promise<nav[]> => {
   const res = await api.get(`/nav-sd?nav-hd-id=${navHdId}`);
   return res.data;
 };
 
-const useGetNavSd = (navHdId: number): UseQueryResult<nav[], Error> => {
+const useGetNavSd = (navHdId: string): UseQueryResult<nav[], Error> => {
   return useQuery<nav[], Error>({
     queryKey: ["nav-sd", navHdId],
     queryFn: () => getNavSd(navHdId),

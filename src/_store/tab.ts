@@ -1,43 +1,50 @@
 import { create } from "zustand";
+import { createJSONStorage, persist } from "zustand/middleware";
 
-interface tab {
-  tabs: tabItem[];
-  newTab: newTab;
-  newKey: string;
+interface TabState {
+  tabs: TabItem[];
+  newTab: NewTab;
   activeKey: string;
 
-  setTabs: (tabs: tabItem[]) => void;
-  setNewTab: (newTab: newTab) => void;
+  setTabs: (tabs: TabItem[]) => void;
+  setNewTab: (newTab: NewTab) => void;
   setActiveKey: (key: string) => void;
   addTab: () => void;
 }
 
-interface tabItem {
+interface TabItem {
   label: string;
-  children: string;
+  link: string;
   key: string;
 }
 
-interface newTab {
+interface NewTab {
   label: string;
-  children: string;
+  link: string;
+  key: string;
 }
 
-const useTabStore = create<tab>((set) => ({
-  tabs: [],
-  newTab: { label: "", children: "" },
-  newKey: "1",
-  activeKey: "0",
+const useTabStore = create<TabState>()(
+  persist(
+    (set) => ({
+      tabs: [],
+      newTab: { label: "", link: "", key: "" },
+      activeKey: "0",
 
-  setTabs: (tabs) => set({ tabs }),
-  addTab: () =>
-    set((state) => ({
-      tabs: [...state.tabs, { ...state.newTab, key: state.newKey }],
-      newKey: String(Number(state.newKey) + 1),
-      activeKey: state.newKey,
-    })),
-  setNewTab: (newTab) => set({ newTab }),
-  setActiveKey: (key) => set({ activeKey: key }),
-}));
+      setTabs: (tabs) => set({ tabs }),
+      setNewTab: (newTab) => set({ newTab }),
+      setActiveKey: (key) => set({ activeKey: key }),
+      addTab: () =>
+        set((state) => ({
+          tabs: [...state.tabs, { ...state.newTab }],
+          activeKey: state.newTab.key,
+        })),
+    }),
+    {
+      name: "tab",
+      storage: createJSONStorage(() => sessionStorage),
+    }
+  )
+);
 
 export default useTabStore;

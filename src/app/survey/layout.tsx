@@ -16,7 +16,7 @@ export default function SurveyLayout({ children }: props) {
         <MenuSider />
         <Layout className="p-4">
           <Tab />
-          <Content className="bg-white w-full p-4 h-10 border border-border-gray rounded-b-md">
+          <Content className="bg-white w-full p-4 h-10 border-x border-b border-border-gray rounded-b-md">
             {children}
           </Content>
         </Layout>

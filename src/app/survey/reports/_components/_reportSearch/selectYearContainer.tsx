@@ -1,23 +1,29 @@
 import useGetYears from "@/_api/_query/useGetYears";
 import useIdStore from "@/_store/id";
 import { Select } from "antd";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function SelectYearContainer() {
+  const [selectedYear, setSelectedYear] = useState<number>(0);
   const { data: years } = useGetYears();
-  const { setYearId } = useIdStore();
+  const { yearId, setYearId } = useIdStore();
+
+  useEffect(() => {
+    if (yearId === 0) {
+      if (years) {
+        setSelectedYear(years[0].year);
+        setYearId(years[0].id);
+      }
+    } else {
+      setSelectedYear(years?.find((year) => year.id === yearId)?.year || 0);
+    }
+  }, [years, yearId]);
 
   const handleChange = (value: number) => {
     setYearId(value);
   };
 
-  useEffect(() => {
-    if (years) {
-      setYearId(years[0].id);
-    }
-  }, [years]);
-
-  const options = years?.map((year) => ({
+  const yearOptions = years?.map((year) => ({
     label: <span className="text-xs">{year.year}</span>,
     value: year.id,
   }));
@@ -26,9 +32,9 @@ export default function SelectYearContainer() {
     <div className="border border-border-gray rounded-md w-full h-10 flex items-center justify-between px-2">
       <span className="font-semibold text-xs">설문응답년도</span>
       <Select
-        defaultValue={2024}
+        value={selectedYear}
         onChange={handleChange}
-        options={options}
+        options={yearOptions}
         size="small"
       />
     </div>

@@ -1,30 +1,56 @@
 "use client";
 
+import useIdStore from "@/_store/id";
 import useTabStore from "@/_store/tab";
 import { Tabs } from "antd";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 type targetKey = React.MouseEvent | React.KeyboardEvent | string;
 
 export default function Tab() {
+  const router = useRouter();
   const { tabs, activeKey, setTabs, addTab, setActiveKey } = useTabStore();
+  const { setNavSdId, resetYearAndSubjectId } = useIdStore();
+
+  useEffect(() => {
+    if (tabs.length === 0) {
+      router.push("/survey");
+      setNavSdId("0");
+    }
+  }, [tabs]);
 
   const onChange = (key: string) => {
     setActiveKey(key);
+
+    const tab = tabs.find((tab) => tab.key === key);
+
+    if (tab) {
+      router.push(tab.link);
+    }
   };
 
   const remove = (targetKey: targetKey) => {
     const targetIndex = tabs.findIndex((tab) => tab.key === targetKey);
-    const newPanes = tabs.filter((tab) => tab.key !== targetKey);
+    const newTabs = tabs.filter((tab) => tab.key !== targetKey);
 
-    if (newPanes.length && targetKey === activeKey) {
-      const { key } =
-        newPanes[
-          targetIndex === newPanes.length ? targetIndex - 1 : targetIndex
-        ];
-      setActiveKey(key);
+    if (targetKey === "1") {
+      resetYearAndSubjectId();
     }
 
-    setTabs(newPanes);
+    if (newTabs.length && targetKey === activeKey) {
+      const { key } =
+        newTabs[targetIndex === newTabs.length ? targetIndex - 1 : targetIndex];
+      setActiveKey(key);
+
+      const tab = tabs.find((tab) => tab.key === key);
+
+      if (tab) {
+        router.push(tab.link);
+      }
+    }
+
+    setTabs(newTabs);
   };
 
   const onEdit = (targetKey: targetKey, action: "add" | "remove") => {
@@ -36,13 +62,17 @@ export default function Tab() {
   };
 
   return (
-    <Tabs
-      hideAdd
-      onChange={onChange}
-      activeKey={String(activeKey)}
-      type="editable-card"
-      onEdit={onEdit}
-      items={tabs}
-    />
+    <div className="h-10 flex border border-border-gray rounded-t-md">
+      <Tabs
+        hideAdd
+        onChange={onChange}
+        activeKey={activeKey}
+        type="editable-card"
+        onEdit={onEdit}
+        items={tabs}
+        tabBarGutter={0}
+        className="border-none"
+      />
+    </div>
   );
 }

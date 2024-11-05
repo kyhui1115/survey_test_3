@@ -18,7 +18,7 @@ export default function LoginForm() {
 
   const onFinish = (values: LoginFormValues) => {
     console.log(values);
-    router.push("/survey/reports");
+    router.push("/survey");
   };
 
   const onFinishFailed = (errorInfo: any) => {
