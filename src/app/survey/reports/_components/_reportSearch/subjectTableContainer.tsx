@@ -67,7 +67,7 @@ export default function SubjectTableContainer() {
           dataSource={dataSource}
           rowKey="id"
           bordered={true}
-          scroll={{ y: 560 }}
+          scroll={{ y: 573 }}
           onRow={(data) => {
             return {
               onClick: () => {
