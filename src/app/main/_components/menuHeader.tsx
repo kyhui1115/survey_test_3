@@ -6,7 +6,7 @@ import { Menu } from "antd";
 import Link from "next/link";
 
 export default function MenuHeader() {
-  const { setNavHdId } = useIdStore();
+  const { navHdId, setNavHdId } = useIdStore();
   const { data: navHd } = useGetNavs();
 
   const menuItems = navHd?.map((nav) => ({
@@ -14,14 +14,17 @@ export default function MenuHeader() {
     label: <Link href={nav.link}>{nav.label}</Link>,
   }));
 
+  const menuHandler = (value: { key: string }) => {
+    setNavHdId(value.key);
+  };
+
   return (
     <Menu
-      theme="dark"
       mode="horizontal"
-      defaultSelectedKeys={["1"]}
+      selectedKeys={[navHdId]}
       items={menuItems}
       className="w-96"
-      onClick={(e) => setNavHdId(Number(e.key))}
+      onClick={menuHandler}
     />
   );
 }

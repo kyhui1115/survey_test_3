@@ -2,6 +2,6 @@
 
 import EmptyMessage from "@/app/_components/emptyMessage";
 
-export default function CatchAllPage() {
+export default function Page() {
   return <EmptyMessage image="default" />;
 }

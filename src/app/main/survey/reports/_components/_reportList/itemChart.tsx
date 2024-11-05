@@ -13,9 +13,9 @@ export default function ItemChart({ tables, tableHeight }: props) {
   return (
     <>
       {showChart && (
-        <div className="w-1/3 justify-center items-center flex h-full border-r border-border-gray pr-10 pt-2">
+        <div className="w-1/3 justify-center items-center flex h-full border-r border-border-gray pr-4 pt-2">
           <BarChart
-            width={450}
+            width={420}
             height={tableHeight}
             data={tables}
             layout="vertical"
@@ -24,7 +24,7 @@ export default function ItemChart({ tables, tableHeight }: props) {
             <YAxis
               type="category"
               dataKey="name"
-              width={90}
+              width={80}
               tick={{ fontSize: 12, fontWeight: 600 }}
             />
             <Tooltip />

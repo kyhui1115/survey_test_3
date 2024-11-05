@@ -13,6 +13,11 @@ export default function MenuSider() {
   const { tabs, setNewTab, addTab, activeKey, setActiveKey } = useTabStore();
   const { data: navSd } = useGetNavSd(navHdId);
 
+  const menuItems = navSd?.map((nav) => ({
+    key: nav.id,
+    label: <Link href={nav.link}>{nav.label}</Link>,
+  }));
+
   const menuHandler = (value: { key: string }) => {
     const selectedTab = tabs.find((tab) => tab.key === value.key);
 
@@ -31,11 +36,6 @@ export default function MenuSider() {
     setNavSdId(activeKey);
   }, [activeKey]);
 
-  const menuItems = navSd?.map((nav) => ({
-    key: nav.id,
-    label: <Link href={nav.link}>{nav.label}</Link>,
-  }));
-
   return (
     <Sider width={240}>
       <Menu
@@ -43,6 +43,7 @@ export default function MenuSider() {
         onClick={menuHandler}
         className="h-full border-r border-border-gray"
         items={menuItems}
+        theme="dark"
       />
     </Sider>
   );

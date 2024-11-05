@@ -13,13 +13,6 @@ export default function Tab() {
   const { tabs, activeKey, setTabs, addTab, setActiveKey } = useTabStore();
   const { setNavSdId, resetYearAndSubjectId } = useIdStore();
 
-  useEffect(() => {
-    if (tabs.length === 0) {
-      router.push("/survey");
-      setNavSdId("0");
-    }
-  }, [tabs]);
-
   const onChange = (key: string) => {
     setActiveKey(key);
 
@@ -33,6 +26,11 @@ export default function Tab() {
   const remove = (targetKey: targetKey) => {
     const targetIndex = tabs.findIndex((tab) => tab.key === targetKey);
     const newTabs = tabs.filter((tab) => tab.key !== targetKey);
+
+    if (newTabs.length === 0) {
+      router.push("/main");
+      setNavSdId("0");
+    }
 
     if (targetKey === "1") {
       resetYearAndSubjectId();
@@ -70,7 +68,7 @@ export default function Tab() {
       onEdit={onEdit}
       items={tabs}
       tabBarGutter={0}
-      className="h-10 bg-slate-300"
+      className="h-10 bg-slate-300 pt-0.5"
     />
   );
 }

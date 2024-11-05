@@ -1,7 +1,7 @@
 import { ConfigProvider, Table } from "antd";
 import TotalCount from "./totalCount";
 import useGetSubjects from "@/_api/_query/useGetSubjects";
-import Spinner from "../../../../_components/spinner";
+import Spinner from "../../../../../_components/spinner";
 import useIdStore from "@/_store/id";
 
 export default function SubjectTableContainer() {

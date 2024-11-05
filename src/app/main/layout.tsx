@@ -8,7 +8,7 @@ interface props {
   children: React.ReactNode;
 }
 
-export default function SurveyLayout({ children }: props) {
+export default function MainLayout({ children }: props) {
   return (
     <Layout className="w-full h-full">
       <Headers />
@@ -19,7 +19,7 @@ export default function SurveyLayout({ children }: props) {
           <Content className="bg-white w-full p-4 h-10">{children}</Content>
         </Layout>
       </Layout>
-      <Footer className="flex justify-center items-center h-8 p-0 bg-gray-700 text-white">
+      <Footer className="flex justify-center items-center h-8 p-0 bg-slate-400 text-white">
         Footer
       </Footer>
     </Layout>

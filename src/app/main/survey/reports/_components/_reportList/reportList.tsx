@@ -3,14 +3,11 @@
 import { Col } from "antd";
 import ReportItem from "./reportItem";
 import useGetReports from "@/_api/_query/useGetReports";
-import EmptyMessage from "../../../../_components/emptyMessage";
-import Spinner from "../../../../_components/spinner";
+import EmptyMessage from "../../../../../_components/emptyMessage";
+import Spinner from "../../../../../_components/spinner";
 import useIdStore from "@/_store/id";
-import useTabStore from "@/_store/tab";
-import { useEffect } from "react";
 
 export default function ReportList() {
-  const { tabs } = useTabStore();
   const { subjectId } = useIdStore();
   const { data: reports, isLoading } = useGetReports(subjectId);
 
