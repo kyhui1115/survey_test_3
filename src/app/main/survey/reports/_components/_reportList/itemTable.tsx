@@ -1,5 +1,5 @@
 import { table } from "@/_api/_query/useGetTables";
-import { ConfigProvider, Skeleton, Table, TableProps } from "antd";
+import { ConfigProvider, Table, TableProps } from "antd";
 import { useEffect, useRef } from "react";
 
 interface props {
