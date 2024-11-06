@@ -3,13 +3,11 @@
 import { Col } from "antd";
 import ReportItem from "./reportItem";
 import useGetReports from "@/_api/_query/useGetReports";
-import EmptyMessage from "../../../../../_components/emptyMessage";
-import Spinner from "../../../../../_components/spinner";
-import useReportIdStore from "@/_store/reportId";
+import Spinner from "@/app/_components/spinner";
+import EmptyMessage from "@/app/_components/emptyMessage";
 
 export default function ReportList() {
-  const { subjectId } = useReportIdStore();
-  const { data: reports, isLoading } = useGetReports(subjectId);
+  const { data: reports, isLoading } = useGetReports();
 
   if (isLoading) {
     return (
