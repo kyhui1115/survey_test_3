@@ -9,6 +9,7 @@ import Link from "next/link";
 
 export default function MenuHeader() {
   const { navHdId, setNavHdId, setNavSdId } = useNavIdStore();
+  const { setActiveKey } = useTabStore();
   const { setTabs } = useTabStore();
   const { resetYearAndSubjectId } = useReportIdStore();
   const { data: navHd } = useGetNavs();
@@ -22,6 +23,7 @@ export default function MenuHeader() {
     setNavHdId(value.key);
     setTabs([]);
     setNavSdId("0");
+    setActiveKey("0");
     resetYearAndSubjectId();
   };
 
@@ -37,7 +39,7 @@ export default function MenuHeader() {
         mode="horizontal"
         selectedKeys={[navHdId]}
         items={menuItems}
-        className="w-96 bg-white"
+        className="w-96 bg-slate-100"
         onClick={menuHandler}
       />
     </ConfigProvider>

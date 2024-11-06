@@ -12,14 +12,14 @@ export default function MainLayout({ children }: props) {
   return (
     <Layout className="w-full h-full">
       <Headers />
-      <Layout>
+      <Layout hasSider={true}>
         <MenuSider />
         <Layout>
           <Tab />
-          <Content className="bg-white w-full h-10 p-4">{children}</Content>
+          <Content className="bg-white w-full p-4 h-screen">{children}</Content>
         </Layout>
       </Layout>
-      <Footer className="flex justify-center items-center h-8 p-0 bg-slate-400 text-white">
+      <Footer className="flex justify-center items-center h-8 p-0 bg-slate-100">
         Footer
       </Footer>
     </Layout>

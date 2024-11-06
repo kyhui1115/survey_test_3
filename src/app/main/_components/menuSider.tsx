@@ -3,7 +3,6 @@
 import useGetNavSd from "@/_api/_query/useGetNavSd";
 import useNavIdStore from "@/_store/navId";
 import useTabStore from "@/_store/tab";
-import Spinner from "@/app/_components/spinner";
 import { Menu } from "antd";
 import Sider from "antd/es/layout/Sider";
 import Link from "next/link";
@@ -12,7 +11,7 @@ import { useEffect } from "react";
 export default function MenuSider() {
   const { navHdId, navSdId, setNavSdId } = useNavIdStore();
   const { tabs, setNewTab, addTab, activeKey, setActiveKey } = useTabStore();
-  const { data: navSd, isLoading } = useGetNavSd(navHdId);
+  const { data: navSd } = useGetNavSd(navHdId);
 
   const menuItems = navSd?.map((nav) => ({
     key: nav.id,
@@ -33,23 +32,20 @@ export default function MenuSider() {
     }
   };
 
+  console.log(activeKey);
   useEffect(() => {
     setNavSdId(activeKey);
   }, [activeKey]);
 
   return (
-    <Sider className="bg-slate-700">
-      {isLoading ? (
-        <Spinner />
-      ) : (
-        <Menu
-          selectedKeys={[navSdId]}
-          onClick={menuHandler}
-          className="h-full border-r border-border-gray bg-slate-700"
-          items={menuItems}
-          theme="dark"
-        />
-      )}
+    <Sider className="bg-slate-600">
+      <Menu
+        selectedKeys={[navSdId]}
+        onClick={menuHandler}
+        className="bg-slate-600"
+        items={menuItems}
+        theme="dark"
+      />
     </Sider>
   );
 }
