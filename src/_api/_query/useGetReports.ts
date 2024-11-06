@@ -3,19 +3,18 @@ import { useQuery, UseQueryResult } from "@tanstack/react-query";
 
 interface report {
   id: number;
-  subjectId: number;
   title: string;
 }
 
-const getReports = async (subjectId: number): Promise<report[]> => {
-  const res = await api.get(`/reports?subjectId=${subjectId}`);
+const getReports = async (): Promise<report[]> => {
+  const res = await api.get(`/reports`);
   return res.data;
 };
 
-const useGetReports = (subjectId: number): UseQueryResult<report[], Error> => {
+const useGetReports = (): UseQueryResult<report[], Error> => {
   return useQuery<report[], Error>({
-    queryKey: ["reports", subjectId],
-    queryFn: () => getReports(subjectId),
+    queryKey: ["reports"],
+    queryFn: () => getReports(),
     staleTime: 1000 * 60 * 5,
   });
 };
