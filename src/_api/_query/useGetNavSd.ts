@@ -8,13 +8,13 @@ interface nav {
 }
 
 const getNavSd = async (navHdId: string): Promise<nav[]> => {
-  const res = await api.get(`/nav-sd?nav-hd-id=${navHdId}`);
+  const res = await api.get(`/navSd?navHdId=${navHdId}`);
   return res.data;
 };
 
 const useGetNavSd = (navHdId: string): UseQueryResult<nav[], Error> => {
   return useQuery<nav[], Error>({
-    queryKey: ["nav-sd", navHdId],
+    queryKey: ["navSd", navHdId],
     queryFn: () => getNavSd(navHdId),
     staleTime: 1000 * 60 * 5,
   });

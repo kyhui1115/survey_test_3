@@ -8,13 +8,13 @@ interface nav {
 }
 
 const getNavHd = async (): Promise<nav[]> => {
-  const res = await api.get("/nav-hd");
+  const res = await api.get("/navHd");
   return res.data;
 };
 
 const useGetNavHd = (): UseQueryResult<nav[], Error> => {
   return useQuery<nav[], Error>({
-    queryKey: ["nav-hd"],
+    queryKey: ["navHd"],
     queryFn: getNavHd,
     staleTime: 1000 * 60 * 5,
   });
