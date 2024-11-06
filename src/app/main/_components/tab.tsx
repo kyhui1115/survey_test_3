@@ -1,18 +1,18 @@
 "use client";
 
-import useNavIdStore from "@/_store/navId";
-import useReportIdStore from "@/_store/reportId";
 import useTabStore from "@/_store/tab";
 import { Tabs } from "antd";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { clearTabInfo } from "../_utils/clearTabInfo";
+import { routerEmptyTab } from "../_utils/routerEmptyTab";
 
-type targetKey = React.MouseEvent | React.KeyboardEvent | string;
+export type targetKey = React.MouseEvent | React.KeyboardEvent | string;
 
 export default function Tab() {
   const router = useRouter();
+  const pathname = usePathname();
+
   const { tabs, activeKey, setTabs, addTab, setActiveKey } = useTabStore();
-  const { setNavSdId } = useNavIdStore();
-  const { resetYearAndSubjectId } = useReportIdStore();
 
   const onChange = (key: string) => {
     setActiveKey(key);
@@ -28,14 +28,8 @@ export default function Tab() {
     const targetIndex = tabs.findIndex((tab) => tab.key === targetKey);
     const newTabs = tabs.filter((tab) => tab.key !== targetKey);
 
-    if (newTabs.length === 0) {
-      router.push("/main");
-      setNavSdId("0");
-    }
-
-    if (targetKey === "1") {
-      resetYearAndSubjectId();
-    }
+    clearTabInfo(targetKey);
+    routerEmptyTab(newTabs.length, router, pathname);
 
     if (newTabs.length && targetKey === activeKey) {
       const { key } =
@@ -61,15 +55,17 @@ export default function Tab() {
   };
 
   return (
-    <Tabs
-      hideAdd
-      onChange={onChange}
-      activeKey={activeKey}
-      type="editable-card"
-      onEdit={onEdit}
-      items={tabs}
-      tabBarGutter={0}
-      className="h-10 bg-slate-300 pt-0.5"
-    />
+    <div className="w-full h-10 bg-white">
+      <Tabs
+        hideAdd
+        onChange={onChange}
+        activeKey={activeKey}
+        type="editable-card"
+        onEdit={onEdit}
+        items={tabs}
+        tabBarGutter={0}
+        className="bg-slate-300 h-10"
+      />
+    </div>
   );
 }
