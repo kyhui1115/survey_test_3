@@ -3,7 +3,6 @@
 import useGetNavSd from "@/_api/_query/useGetNavSd";
 import useNavIdStore from "@/_store/navId";
 import useTabStore from "@/_store/tab";
-import EmptyMessage from "@/app/_components/emptyMessage";
 import Spinner from "@/app/_components/spinner";
 import { Menu } from "antd";
 import Sider from "antd/es/layout/Sider";
@@ -39,7 +38,7 @@ export default function MenuSider() {
   }, [activeKey]);
 
   return (
-    <Sider width={240} className="bg-slate-700">
+    <Sider className="bg-slate-700">
       {isLoading ? (
         <Spinner />
       ) : (
