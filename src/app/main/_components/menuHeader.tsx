@@ -2,7 +2,7 @@
 
 import useGetNavs from "@/_api/_query/useGetNavHd";
 import useNavIdStore from "@/_store/navId";
-import useReportIdStore from "@/_store/reportId";
+import useReportIdStore from "@/_store/report";
 import useTabStore from "@/_store/tab";
 import { ConfigProvider, Menu } from "antd";
 import Link from "next/link";

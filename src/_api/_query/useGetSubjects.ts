@@ -2,20 +2,22 @@ import api from "@/_api";
 import { useQuery, UseQueryResult } from "@tanstack/react-query";
 
 interface subject {
-  id: number;
-  yearId: Number;
-  subjectNum: Number;
+  id: string;
+  reportYearId: string;
+  subjectNum: string;
 }
 
-const getSubjects = async (yearId: Number): Promise<subject[]> => {
-  const res = await api.get(`/subjects?yearId=${yearId}`);
+const getSubjects = async (reportYearId: string): Promise<subject[]> => {
+  const res = await api.get(`/subjects?reportYearId=${reportYearId}`);
   return res.data;
 };
 
-const useGetSubjects = (yearId: Number): UseQueryResult<subject[], Error> => {
+const useGetSubjects = (
+  reportYearId: string
+): UseQueryResult<subject[], Error> => {
   return useQuery<subject[], Error>({
-    queryKey: ["subjects", yearId],
-    queryFn: () => getSubjects(yearId),
+    queryKey: ["subjects", reportYearId],
+    queryFn: () => getSubjects(reportYearId),
     staleTime: 1000 * 60 * 5,
   });
 };

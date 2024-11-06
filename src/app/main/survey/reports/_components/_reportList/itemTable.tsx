@@ -1,19 +1,20 @@
+import { tableHeader } from "@/_api/_query/useGetTableHeaders";
 import { table } from "@/_api/_query/useGetTables";
-import { ConfigProvider, Table, TableProps } from "antd";
+import { recursiveHeader } from "@/_utils/recursiveHeader";
+import { ConfigProvider, Table } from "antd";
 import { useEffect, useRef } from "react";
 
 interface props {
   tables: table[] | undefined;
   setTableHeight: React.Dispatch<React.SetStateAction<number>>;
+  tableHeaders: tableHeader[] | undefined;
 }
 
-interface DataType {
-  id: number;
-  name: string;
-  scoreAndTotal: string;
-}
-
-export default function ItemTable({ tables, setTableHeight }: props) {
+export default function ItemTable({
+  tables,
+  setTableHeight,
+  tableHeaders,
+}: props) {
   const tableRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -24,30 +25,7 @@ export default function ItemTable({ tables, setTableHeight }: props) {
     }
   }, [tables, setTableHeight]);
 
-  const columns: TableProps<DataType>["columns"] = [
-    {
-      title: () => <span className="flex justify-center text-xs">대분류</span>,
-      dataIndex: "name",
-      rowScope: "row",
-      render: (text: string) => (
-        <span className="flex justify-center text-xs text-center">{text}</span>
-      ),
-      width: 90,
-    },
-    {
-      title: () => <span className="flex justify-center text-xs">점수</span>,
-      dataIndex: "scoreAndTotal",
-      render: (text: string) => (
-        <span className="flex justify-center text-xs">{text}</span>
-      ),
-    },
-  ];
-
-  const dataSource = tables?.map((table) => ({
-    id: table.id,
-    name: table.name,
-    scoreAndTotal: `${table.score} / ${table.total}`,
-  }));
+  const columns = recursiveHeader(tableHeaders || []);
 
   return (
     <div
@@ -66,11 +44,12 @@ export default function ItemTable({ tables, setTableHeight }: props) {
       >
         <Table
           columns={columns}
-          dataSource={dataSource}
+          dataSource={[]}
           pagination={false}
           rowKey="id"
           bordered={true}
-          className="w-72"
+          scroll={{ x: "max-content" }}
+          className="w-100"
           size="small"
         />
       </ConfigProvider>

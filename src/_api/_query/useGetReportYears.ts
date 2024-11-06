@@ -2,12 +2,12 @@ import api from "@/_api";
 import { useQuery, UseQueryResult } from "@tanstack/react-query";
 
 interface year {
-  id: number;
-  year: number;
+  id: string;
+  year: string;
 }
 
 const getReportYears = async (): Promise<year[]> => {
-  const res = await api.get("/reportYears");
+  const res = await api.get("/reportYears?_sort=year&_order=desc");
   return res.data;
 };
 

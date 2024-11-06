@@ -2,7 +2,7 @@ import api from "@/_api";
 import { useQuery, UseQueryResult } from "@tanstack/react-query";
 
 interface nav {
-  id: number;
+  id: string;
   label: string;
   link: string;
 }

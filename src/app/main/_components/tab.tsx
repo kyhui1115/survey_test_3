@@ -3,8 +3,8 @@
 import useTabStore from "@/_store/tab";
 import { Tabs } from "antd";
 import { usePathname, useRouter } from "next/navigation";
-import { clearTabInfo } from "../_utils/clearTabInfo";
-import { routerEmptyTab } from "../_utils/routerEmptyTab";
+import { clearTabInfo } from "../../../_utils/clearTabInfo";
+import { routerEmptyTab } from "../../../_utils/routerEmptyTab";
 
 export type targetKey = React.MouseEvent | React.KeyboardEvent | string;
 

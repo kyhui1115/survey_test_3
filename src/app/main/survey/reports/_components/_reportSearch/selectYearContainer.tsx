@@ -1,38 +1,31 @@
 import useGetReportYears from "@/_api/_query/useGetReportYears";
-import useReportIdStore from "@/_store/reportId";
+import useReportStore from "@/_store/report";
 import { Select } from "antd";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function SelectYearContainer() {
-  const [selectedYear, setSelectedYear] = useState<number>(0);
   const { data: years } = useGetReportYears();
-  const { yearId, setYearId } = useReportIdStore();
+  const { year, setYear, setYearId } = useReportStore();
 
-  useEffect(() => {
-    if (yearId === 0) {
-      if (years) {
-        setSelectedYear(years[0].year);
-        setYearId(years[0].id);
-      }
-    } else {
-      setSelectedYear(years?.find((year) => year.id === yearId)?.year || 0);
-    }
-  }, [years, yearId]);
-
-  const handleChange = (value: number) => {
+  const handleChange = (value: string) => {
+    setYear(years?.find((year) => year.id === value)?.year || "");
     setYearId(value);
   };
 
-  const yearOptions = years?.map((year) => ({
-    label: <span className="text-xs">{year.year}</span>,
-    value: year.id,
+  const yearOptions = years?.map((y) => ({
+    label: <span className="text-xs">{y.year}</span>,
+    value: y.id,
   }));
+
+  useEffect(() => {
+    // setYear에 years의 맨 처음값 넣기
+  }, []);
 
   return (
     <div className="border border-border-gray rounded-md w-full h-10 flex items-center justify-between px-2">
       <span className="font-semibold text-xs">설문응답년도</span>
       <Select
-        value={selectedYear}
+        value={year}
         onChange={handleChange}
         options={yearOptions}
         size="small"

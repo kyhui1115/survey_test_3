@@ -2,7 +2,7 @@ import api from "@/_api";
 import { useQuery, UseQueryResult } from "@tanstack/react-query";
 
 interface report {
-  id: number;
+  id: string;
   title: string;
 }
 
