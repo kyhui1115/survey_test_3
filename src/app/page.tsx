@@ -8,12 +8,14 @@ export default function Home() {
   const auth = "";
 
   useLayoutEffect(() => {
+    sessionStorage.clear();
+
     if (auth) {
       router.push("/survey/reports");
     } else {
       router.push("/login");
     }
-  }, [router]);
+  }, []);
 
   return <></>;
 }
