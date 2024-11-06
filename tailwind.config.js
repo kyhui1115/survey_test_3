@@ -16,6 +16,9 @@ module.exports = {
       colors: {
         "border-gray": "#9ca3af",
       },
+      width: {
+        100: "25rem",
+      },
     },
   },
   plugins: [],
