@@ -32,7 +32,6 @@ export default function MenuSider() {
     }
   };
 
-  console.log(activeKey);
   useEffect(() => {
     setNavSdId(activeKey);
   }, [activeKey]);
