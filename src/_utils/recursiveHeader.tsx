@@ -1,19 +1,35 @@
 import { tableHeader } from "@/_api/_query/useGetTableHeaders";
+import { Tooltip } from "antd";
 
 export const recursiveHeader = (headers: tableHeader[]) => {
   return headers?.map((header) => {
     const newHeaders = {
       ...header,
       title: () => (
-        <span
-          className={`flex justify-center text-xs text-${header.textAlign}`}
-        >
-          {header.title as string}
-        </span>
+        <Tooltip title={header.title} placement="top">
+          <div className="flex justify-center">
+            <span
+              style={{
+                fontSize: 10,
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                whiteSpace: "nowrap",
+                maxWidth: 70,
+              }}
+            >
+              {header.title as string}
+            </span>
+          </div>
+        </Tooltip>
       ),
       dataIndex: header.dataIndex,
       render: (text: string) => (
-        <span className="flex justify-center text-xs">{text}</span>
+        <span
+          className={`flex justify-${header.textAlign}`}
+          style={{ fontSize: 11 }}
+        >
+          {text}
+        </span>
       ),
     };
 

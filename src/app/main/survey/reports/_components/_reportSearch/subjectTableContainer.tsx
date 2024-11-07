@@ -11,22 +11,32 @@ export default function SubjectTableContainer() {
 
   const columns = [
     {
-      title: () => <span className="flex justify-center text-xs">NO</span>,
+      title: () => (
+        <span className="flex justify-center h-4" style={{ fontSize: 11 }}>
+          NO
+        </span>
+      ),
       dataIndex: "index",
       key: "index",
       render: (text: string) => (
-        <span className="flex justify-center text-xs">{text}</span>
+        <span className="flex justify-center h-4" style={{ fontSize: 11 }}>
+          {text}
+        </span>
       ),
-      width: 80,
+      width: 50,
     },
     {
       title: () => (
-        <span className="flex justify-center text-xs">대상자번호</span>
+        <span className="flex justify-center h-4" style={{ fontSize: 11 }}>
+          대상자번호
+        </span>
       ),
       dataIndex: "subjectNum",
       key: "id",
       render: (text: string) => (
-        <span className="flex justify-center text-xs">{text}</span>
+        <span className="flex justify-center h-4" style={{ fontSize: 11 }}>
+          {text}
+        </span>
       ),
     },
   ];

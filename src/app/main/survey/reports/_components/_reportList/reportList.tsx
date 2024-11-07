@@ -11,7 +11,7 @@ export default function ReportList() {
 
   if (isLoading) {
     return (
-      <Col className="pl-4 h-full" span={20}>
+      <Col className="pl-4 h-full" span={21}>
         <div className="border border-border-gray rounded-l-md w-full h-full overflow-y-scroll px-6 pb-6">
           <Spinner />
         </div>
@@ -20,7 +20,7 @@ export default function ReportList() {
   }
 
   return (
-    <Col className="pl-4 h-full" span={20}>
+    <Col className="pl-4 h-full" span={21}>
       <div className="border border-border-gray rounded-l-md w-full h-full overflow-y-scroll px-6 pb-6 pt-3">
         {reports?.length === 0 ? (
           <EmptyMessage image="default" />
@@ -30,7 +30,7 @@ export default function ReportList() {
             {reports?.map((report, idx) => (
               <ReportItem
                 key={report.id}
-                id={report.id}
+                reportId={report.id}
                 title={report.title}
                 no={idx + 1}
               />
