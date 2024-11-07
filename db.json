@@ -25,99 +25,99 @@
   "navSd": [
     {
       "id": "1",
-      "navHdId": "1",
       "label": "보고서",
-      "link": "/main/survey/reports"
+      "link": "/main/survey/reports",
+      "navHdId": "1"
     },
     {
       "id": "2",
-      "navHdId": "1",
       "label": "/survey/navSd2",
-      "link": "/main/survey/navSd2"
+      "link": "/main/survey/navSd2",
+      "navHdId": "1"
     },
     {
       "id": "3",
-      "navHdId": "1",
       "label": "/survey/navSd3",
-      "link": "/main/survey/navSd3"
+      "link": "/main/survey/navSd3",
+      "navHdId": "1"
     },
     {
       "id": "4",
-      "navHdId": "1",
       "label": "/survey/navSd4",
-      "link": "/main/survey/navSd4"
+      "link": "/main/survey/navSd4",
+      "navHdId": "1"
     },
     {
       "id": "5",
-      "navHdId": "2",
       "label": "/navHd2/navSd1",
-      "link": "/main/navHd2/navSd1"
+      "link": "/main/navHd2/navSd1",
+      "navHdId": "2"
     },
     {
       "id": "6",
-      "navHdId": "2",
       "label": "/navHd2/navSd2",
-      "link": "/main/navHd2/navSd2"
+      "link": "/main/navHd2/navSd2",
+      "navHdId": "2"
     },
     {
       "id": "7",
-      "navHdId": "2",
       "label": "/navHd2/navSd3",
-      "link": "/main/navHd2/navSd3"
+      "link": "/main/navHd2/navSd3",
+      "navHdId": "2"
     },
     {
       "id": "8",
-      "navHdId": "2",
       "label": "/navHd2/navSd4",
-      "link": "/main/navHd2/navSd4"
+      "link": "/main/navHd2/navSd4",
+      "navHdId": "2"
     },
     {
       "id": "9",
-      "navHdId": "3",
       "label": "/navHd3/navSd1",
-      "link": "/main/navHd3/navSd1"
+      "link": "/main/navHd3/navSd1",
+      "navHdId": "3"
     },
     {
       "id": "10",
-      "navHdId": "3",
       "label": "/navHd3/navSd2",
-      "link": "/main/navHd3/navSd2"
+      "link": "/main/navHd3/navSd2",
+      "navHdId": "3"
     },
     {
       "id": "11",
-      "navHdId": "3",
       "label": "/navHd3/navSd3",
-      "link": "/main/navHd3/navSd3"
+      "link": "/main/navHd3/navSd3",
+      "navHdId": "3"
     },
     {
       "id": "12",
-      "navHdId": "3",
       "label": "/navHd3/navSd4",
-      "link": "/main/navHd3/navSd4"
+      "link": "/main/navHd3/navSd4",
+      "navHdId": "3"
     },
     {
       "id": "13",
-      "navHdId": "4",
       "label": "/navHd4/navSd1",
-      "link": "/main/navHd4/navSd1"
+      "link": "/main/navHd4/navSd1",
+      "navHdId": "4"
     },
     {
       "id": "14",
-      "navHdId": "4",
       "label": "/navHd4/navSd2",
-      "link": "/main/navHd4/navSd2"
+      "link": "/main/navHd4/navSd2",
+      "navHdId": "4"
     },
     {
       "id": "15",
-      "navHdId": "4",
       "label": "/navHd4/navSd3",
-      "link": "/main/navHd4/navSd3"
+      "link": "/main/navHd4/navSd3",
+      "navHdId": "4"
     },
     {
       "id": "16",
-      "navHdId": "4",
       "label": "/navHd4/navSd4",
-      "link": "/main/navHd4/navSd4"
+      "link": "/main/navHd4/navSd4",
+      "navHdId": "4"
     }
   ],
 
@@ -131,86 +131,86 @@
   ],
 
   "subjects": [
-    { "id": "1", "reportYearId": "2", "subjectNum": "1" },
-    { "id": "2", "reportYearId": "2", "subjectNum": "2" },
-    { "id": "3", "reportYearId": "2", "subjectNum": "3" },
-    { "id": "4", "reportYearId": "2", "subjectNum": "4" },
-    { "id": "5", "reportYearId": "2", "subjectNum": "5" },
-    { "id": "6", "reportYearId": "2", "subjectNum": "6" },
-    { "id": "7", "reportYearId": "2", "subjectNum": "7" },
-    { "id": "8", "reportYearId": "2", "subjectNum": "8" },
-    { "id": "9", "reportYearId": "2", "subjectNum": "9" },
-    { "id": "10", "reportYearId": "2", "subjectNum": "10" },
-    { "id": "11", "reportYearId": "3", "subjectNum": "11" },
-    { "id": "12", "reportYearId": "3", "subjectNum": "12" },
-    { "id": "13", "reportYearId": "3", "subjectNum": "13" },
-    { "id": "14", "reportYearId": "3", "subjectNum": "14" },
-    { "id": "15", "reportYearId": "3", "subjectNum": "15" },
-    { "id": "16", "reportYearId": "3", "subjectNum": "16" },
-    { "id": "17", "reportYearId": "3", "subjectNum": "17" },
-    { "id": "18", "reportYearId": "3", "subjectNum": "18" },
-    { "id": "19", "reportYearId": "3", "subjectNum": "19" },
-    { "id": "20", "reportYearId": "3", "subjectNum": "20" },
-    { "id": "21", "reportYearId": "4", "subjectNum": "21" },
-    { "id": "22", "reportYearId": "4", "subjectNum": "22" },
-    { "id": "23", "reportYearId": "4", "subjectNum": "23" },
-    { "id": "24", "reportYearId": "4", "subjectNum": "24" },
-    { "id": "25", "reportYearId": "4", "subjectNum": "25" },
-    { "id": "26", "reportYearId": "4", "subjectNum": "26" },
-    { "id": "27", "reportYearId": "4", "subjectNum": "27" },
-    { "id": "28", "reportYearId": "4", "subjectNum": "28" },
-    { "id": "29", "reportYearId": "4", "subjectNum": "29" },
-    { "id": "30", "reportYearId": "4", "subjectNum": "30" },
-    { "id": "31", "reportYearId": "5", "subjectNum": "31" },
-    { "id": "32", "reportYearId": "5", "subjectNum": "32" },
-    { "id": "33", "reportYearId": "5", "subjectNum": "33" },
-    { "id": "34", "reportYearId": "5", "subjectNum": "34" },
-    { "id": "35", "reportYearId": "5", "subjectNum": "35" },
-    { "id": "36", "reportYearId": "5", "subjectNum": "36" },
-    { "id": "37", "reportYearId": "5", "subjectNum": "37" },
-    { "id": "38", "reportYearId": "5", "subjectNum": "38" },
-    { "id": "39", "reportYearId": "5", "subjectNum": "39" },
-    { "id": "40", "reportYearId": "5", "subjectNum": "40" },
-    { "id": "41", "reportYearId": "6", "subjectNum": "41" },
-    { "id": "42", "reportYearId": "6", "subjectNum": "42" },
-    { "id": "43", "reportYearId": "6", "subjectNum": "43" },
-    { "id": "44", "reportYearId": "6", "subjectNum": "44" },
-    { "id": "45", "reportYearId": "6", "subjectNum": "45" },
-    { "id": "46", "reportYearId": "6", "subjectNum": "46" },
-    { "id": "47", "reportYearId": "6", "subjectNum": "47" },
-    { "id": "48", "reportYearId": "6", "subjectNum": "48" },
-    { "id": "49", "reportYearId": "6", "subjectNum": "49" },
-    { "id": "50", "reportYearId": "6", "subjectNum": "50" },
-    { "id": "51", "reportYearId": "6", "subjectNum": "51" },
-    { "id": "52", "reportYearId": "6", "subjectNum": "52" },
-    { "id": "53", "reportYearId": "6", "subjectNum": "53" },
-    { "id": "54", "reportYearId": "6", "subjectNum": "54" },
-    { "id": "55", "reportYearId": "6", "subjectNum": "55" },
-    { "id": "56", "reportYearId": "6", "subjectNum": "56" },
-    { "id": "57", "reportYearId": "6", "subjectNum": "57" },
-    { "id": "58", "reportYearId": "6", "subjectNum": "58" },
-    { "id": "59", "reportYearId": "6", "subjectNum": "59" },
-    { "id": "60", "reportYearId": "6", "subjectNum": "60" },
-    { "id": "61", "reportYearId": "6", "subjectNum": "61" },
-    { "id": "62", "reportYearId": "6", "subjectNum": "62" },
-    { "id": "63", "reportYearId": "6", "subjectNum": "63" },
-    { "id": "64", "reportYearId": "6", "subjectNum": "64" },
-    { "id": "65", "reportYearId": "6", "subjectNum": "65" },
-    { "id": "66", "reportYearId": "6", "subjectNum": "66" },
-    { "id": "67", "reportYearId": "6", "subjectNum": "67" },
-    { "id": "68", "reportYearId": "6", "subjectNum": "68" },
-    { "id": "69", "reportYearId": "6", "subjectNum": "69" },
-    { "id": "70", "reportYearId": "6", "subjectNum": "70" },
-    { "id": "71", "reportYearId": "6", "subjectNum": "71" },
-    { "id": "72", "reportYearId": "6", "subjectNum": "72" },
-    { "id": "73", "reportYearId": "6", "subjectNum": "73" },
-    { "id": "74", "reportYearId": "6", "subjectNum": "74" },
-    { "id": "75", "reportYearId": "6", "subjectNum": "75" },
-    { "id": "76", "reportYearId": "6", "subjectNum": "76" },
-    { "id": "77", "reportYearId": "6", "subjectNum": "77" },
-    { "id": "78", "reportYearId": "6", "subjectNum": "78" },
-    { "id": "79", "reportYearId": "6", "subjectNum": "79" },
-    { "id": "80", "reportYearId": "6", "subjectNum": "80" }
+    { "id": "1", "subjectNum": "1", "reportYearId": "2" },
+    { "id": "2", "subjectNum": "2", "reportYearId": "2" },
+    { "id": "3", "subjectNum": "3", "reportYearId": "2" },
+    { "id": "4", "subjectNum": "4", "reportYearId": "2" },
+    { "id": "5", "subjectNum": "5", "reportYearId": "2" },
+    { "id": "6", "subjectNum": "6", "reportYearId": "2" },
+    { "id": "7", "subjectNum": "7", "reportYearId": "2" },
+    { "id": "8", "subjectNum": "8", "reportYearId": "2" },
+    { "id": "9", "subjectNum": "9", "reportYearId": "2" },
+    { "id": "10", "subjectNum": "10", "reportYearId": "2" },
+    { "id": "11", "subjectNum": "11", "reportYearId": "3" },
+    { "id": "12", "subjectNum": "12", "reportYearId": "3" },
+    { "id": "13", "subjectNum": "13", "reportYearId": "3" },
+    { "id": "14", "subjectNum": "14", "reportYearId": "3" },
+    { "id": "15", "subjectNum": "15", "reportYearId": "3" },
+    { "id": "16", "subjectNum": "16", "reportYearId": "3" },
+    { "id": "17", "subjectNum": "17", "reportYearId": "3" },
+    { "id": "18", "subjectNum": "18", "reportYearId": "3" },
+    { "id": "19", "subjectNum": "19", "reportYearId": "3" },
+    { "id": "20", "subjectNum": "20", "reportYearId": "3" },
+    { "id": "21", "subjectNum": "21", "reportYearId": "4" },
+    { "id": "22", "subjectNum": "22", "reportYearId": "4" },
+    { "id": "23", "subjectNum": "23", "reportYearId": "4" },
+    { "id": "24", "subjectNum": "24", "reportYearId": "4" },
+    { "id": "25", "subjectNum": "25", "reportYearId": "4" },
+    { "id": "26", "subjectNum": "26", "reportYearId": "4" },
+    { "id": "27", "subjectNum": "27", "reportYearId": "4" },
+    { "id": "28", "subjectNum": "28", "reportYearId": "4" },
+    { "id": "29", "subjectNum": "29", "reportYearId": "4" },
+    { "id": "30", "subjectNum": "30", "reportYearId": "4" },
+    { "id": "31", "subjectNum": "31", "reportYearId": "5" },
+    { "id": "32", "subjectNum": "32", "reportYearId": "5" },
+    { "id": "33", "subjectNum": "33", "reportYearId": "5" },
+    { "id": "34", "subjectNum": "34", "reportYearId": "5" },
+    { "id": "35", "subjectNum": "35", "reportYearId": "5" },
+    { "id": "36", "subjectNum": "36", "reportYearId": "5" },
+    { "id": "37", "subjectNum": "37", "reportYearId": "5" },
+    { "id": "38", "subjectNum": "38", "reportYearId": "5" },
+    { "id": "39", "subjectNum": "39", "reportYearId": "5" },
+    { "id": "40", "subjectNum": "40", "reportYearId": "5" },
+    { "id": "41", "subjectNum": "41", "reportYearId": "6" },
+    { "id": "42", "subjectNum": "42", "reportYearId": "6" },
+    { "id": "43", "subjectNum": "43", "reportYearId": "6" },
+    { "id": "44", "subjectNum": "44", "reportYearId": "6" },
+    { "id": "45", "subjectNum": "45", "reportYearId": "6" },
+    { "id": "46", "subjectNum": "46", "reportYearId": "6" },
+    { "id": "47", "subjectNum": "47", "reportYearId": "6" },
+    { "id": "48", "subjectNum": "48", "reportYearId": "6" },
+    { "id": "49", "subjectNum": "49", "reportYearId": "6" },
+    { "id": "50", "subjectNum": "50", "reportYearId": "6" },
+    { "id": "51", "subjectNum": "51", "reportYearId": "6" },
+    { "id": "52", "subjectNum": "52", "reportYearId": "6" },
+    { "id": "53", "subjectNum": "53", "reportYearId": "6" },
+    { "id": "54", "subjectNum": "54", "reportYearId": "6" },
+    { "id": "55", "subjectNum": "55", "reportYearId": "6" },
+    { "id": "56", "subjectNum": "56", "reportYearId": "6" },
+    { "id": "57", "subjectNum": "57", "reportYearId": "6" },
+    { "id": "58", "subjectNum": "58", "reportYearId": "6" },
+    { "id": "59", "subjectNum": "59", "reportYearId": "6" },
+    { "id": "60", "subjectNum": "60", "reportYearId": "6" },
+    { "id": "61", "subjectNum": "61", "reportYearId": "6" },
+    { "id": "62", "subjectNum": "62", "reportYearId": "6" },
+    { "id": "63", "subjectNum": "63", "reportYearId": "6" },
+    { "id": "64", "subjectNum": "64", "reportYearId": "6" },
+    { "id": "65", "subjectNum": "65", "reportYearId": "6" },
+    { "id": "66", "subjectNum": "66", "reportYearId": "6" },
+    { "id": "67", "subjectNum": "67", "reportYearId": "6" },
+    { "id": "68", "subjectNum": "68", "reportYearId": "6" },
+    { "id": "69", "subjectNum": "69", "reportYearId": "6" },
+    { "id": "70", "subjectNum": "70", "reportYearId": "6" },
+    { "id": "71", "subjectNum": "71", "reportYearId": "6" },
+    { "id": "72", "subjectNum": "72", "reportYearId": "6" },
+    { "id": "73", "subjectNum": "73", "reportYearId": "6" },
+    { "id": "74", "subjectNum": "74", "reportYearId": "6" },
+    { "id": "75", "subjectNum": "75", "reportYearId": "6" },
+    { "id": "76", "subjectNum": "76", "reportYearId": "6" },
+    { "id": "77", "subjectNum": "77", "reportYearId": "6" },
+    { "id": "78", "subjectNum": "78", "reportYearId": "6" },
+    { "id": "79", "subjectNum": "79", "reportYearId": "6" },
+    { "id": "80", "subjectNum": "80", "reportYearId": "6" }
   ],
 
   "reports": [
@@ -224,17 +224,16 @@
   "tableHeaders": [
     {
       "id": "1",
-      "reportId": "1",
       "title": "직급",
       "dataIndex": "JOBGRD_TCD",
       "colSpan": 1,
       "rowSpan": 2,
       "textAlign": "center",
-      "children": []
+      "children": [],
+      "reportId": "1"
     },
     {
       "id": "2",
-      "reportId": "1",
       "title": "E지표",
       "dataIndex": "E_Indi1",
       "colSpan": 3,
@@ -250,11 +249,11 @@
           "textAlign": "center",
           "children": []
         }
-      ]
+      ],
+      "reportId": "1"
     },
     {
       "id": "3",
-      "reportId": "1",
       "title": "E지표",
       "dataIndex": "E_Indi1",
       "colSpan": 0,
@@ -270,11 +269,11 @@
           "textAlign": "center",
           "children": []
         }
-      ]
+      ],
+      "reportId": "1"
     },
     {
       "id": "4",
-      "reportId": "1",
       "title": "E지표",
       "dataIndex": "E_Indi1",
       "colSpan": 0,
@@ -290,321 +289,305 @@
           "textAlign": "center",
           "children": []
         }
-      ]
+      ],
+      "reportId": "1"
+    },
+    {
+      "id": "5",
+      "title": "성별",
+      "dataIndex": "SEX_TCD",
+      "colSpan": 1,
+      "rowSpan": 1,
+      "textAlign": "center",
+      "children": [],
+      "reportId": "2"
+    },
+    {
+      "id": "6",
+      "title": "친환경 혁신역량 및 개선성과 점수E",
+      "dataIndex": "SVY_MNTR_PRVS_NO_1",
+      "colSpan": 1,
+      "rowSpan": 1,
+      "textAlign": "center",
+      "children": [],
+      "reportId": "2"
+    },
+    {
+      "id": "7",
+      "title": "환경경영시스템 인증 점수",
+      "dataIndex": "SVY_MNTR_PRVS_NO_2",
+      "colSpan": 1,
+      "rowSpan": 1,
+      "textAlign": "center",
+      "children": [],
+      "reportId": "2"
+    },
+    {
+      "id": "8",
+      "title": "친환경 제품개발 활동 점수",
+      "dataIndex": "SVY_MNTR_PRVS_NO_3",
+      "colSpan": 1,
+      "rowSpan": 1,
+      "textAlign": "center",
+      "children": [],
+      "reportId": "2"
+    },
+    {
+      "id": "9",
+      "title": "공급망 관리 점수",
+      "dataIndex": "SVY_MNTR_PRVS_NO_4",
+      "colSpan": 1,
+      "rowSpan": 1,
+      "textAlign": "center",
+      "children": [],
+      "reportId": "2"
+    },
+    {
+      "id": "10",
+      "title": "원료 점수",
+      "dataIndex": "SVY_MNTR_PRVS_NO_5",
+      "colSpan": 1,
+      "rowSpan": 1,
+      "textAlign": "center",
+      "children": [],
+      "reportId": "2"
+    },
+    {
+      "id": "11",
+      "title": "화학물질 배출 점수",
+      "dataIndex": "SVY_MNTR_PRVS_NO_6",
+      "colSpan": 1,
+      "rowSpan": 1,
+      "textAlign": "center",
+      "children": [],
+      "reportId": "2"
+    },
+    {
+      "id": "12",
+      "title": "배수ㆍ배기ㆍ폐기물",
+      "dataIndex": "SVY_MNTR_PRVS_NO_7",
+      "colSpan": 1,
+      "rowSpan": 1,
+      "textAlign": "center",
+      "children": [],
+      "reportId": "2"
     }
   ],
 
   "tableData": [
     {
-      "id": "41",
-      "data": [
-        {
-          "id": "1",
-          "contents": {
-            "JOBGRD_TCD": "사원",
-            "SVY_MNTR_PRVS_NO_1": "2.5",
-            "SVY_MNTR_PRVS_NO_2": "2.74",
-            "SVY_MNTR_PRVS_NO_3": "2.3"
-          }
-        }
-      ]
+      "id": "1",
+      "dataIndex": [
+        "JOBGRD_TCD",
+        "SVY_MNTR_PRVS_NO_1",
+        "SVY_MNTR_PRVS_NO_2",
+        "SVY_MNTR_PRVS_NO_3"
+      ],
+      "data": ["사원", "2.5", "2.74", "2.3"],
+      "subjectId": "41",
+      "reportId": "1"
     },
     {
-      "id": "42",
-      "data": [
-        {
-          "id": "1",
-          "contents": {
-            "JOBGRD_TCD": "대리",
-            "SVY_MNTR_PRVS_NO_1": "2.96",
-            "SVY_MNTR_PRVS_NO_2": "2.1",
-            "SVY_MNTR_PRVS_NO_3": "2.66"
-          }
-        }
-      ]
+      "id": "2",
+      "dataIndex": [
+        "SEX_TCD",
+        "SVY_MNTR_PRVS_NO_1",
+        "SVY_MNTR_PRVS_NO_2",
+        "SVY_MNTR_PRVS_NO_3",
+        "SVY_MNTR_PRVS_NO_4",
+        "SVY_MNTR_PRVS_NO_5",
+        "SVY_MNTR_PRVS_NO_6",
+        "SVY_MNTR_PRVS_NO_7"
+      ],
+      "data": ["남", "2.74", "2.79", "2.73", "2.6", "2.52", "2.9", "2.76"],
+      "subjectId": "41",
+      "reportId": "2"
+    },
+    {
+      "id": "3",
+      "dataIndex": [
+        "JOBGRD_TCD",
+        "SVY_MNTR_PRVS_NO_1",
+        "SVY_MNTR_PRVS_NO_2",
+        "SVY_MNTR_PRVS_NO_3"
+      ],
+      "data": ["대리", "2.96", "2.1", "2.66"],
+      "subjectId": "42",
+      "reportId": "1"
+    },
+    {
+      "id": "4",
+      "dataIndex": [
+        "SEX_TCD",
+        "SVY_MNTR_PRVS_NO_1",
+        "SVY_MNTR_PRVS_NO_2",
+        "SVY_MNTR_PRVS_NO_3",
+        "SVY_MNTR_PRVS_NO_4",
+        "SVY_MNTR_PRVS_NO_5",
+        "SVY_MNTR_PRVS_NO_6",
+        "SVY_MNTR_PRVS_NO_7"
+      ],
+      "data": ["여", "2.32", "2.48", "2.33", "2.89", "2.76", "2.48", "2.13"],
+      "subjectId": "42",
+      "reportId": "2"
     }
   ],
 
-  "tables": [
+  "dashboard": [
     {
-      "id": 1,
-      "reportId": 1,
-      "name": "공정수준",
-      "score": 42,
-      "total": 100
+      "id": "1",
+      "data": [
+        {
+          "id": "1",
+          "title": "친환경 혁신역량 및 개선성과 점수",
+          "score": "2.5"
+        },
+        {
+          "id": "2",
+          "title": "환경경영시스템 인증 점수",
+          "score": "2.74"
+        },
+        {
+          "id": "3",
+          "title": "친환경 제품개발 활동 점수",
+          "score": "2.3"
+        }
+      ],
+      "subjectId": "41",
+      "reportId": "1"
     },
     {
-      "id": 2,
-      "reportId": 1,
-      "name": "공통",
-      "score": 60,
-      "total": 100
+      "id": "2",
+      "data": [
+        {
+          "id": "1",
+          "title": "친환경 혁신역량 및 개선성과 점수E",
+          "score": "2.74"
+        },
+        {
+          "id": "2",
+          "title": "경영 점수",
+          "score": "2.79"
+        },
+        {
+          "id": "3",
+          "title": "친환경 제품 점수",
+          "score": "2.73"
+        },
+        {
+          "id": "4",
+          "title": "공급망 관리 점수",
+          "score": "2.6"
+        },
+        {
+          "id": "5",
+          "title": "원료 점수",
+          "score": "2.52"
+        },
+        {
+          "id": "6",
+          "title": "화학물질 배출 점수",
+          "score": "2.9"
+        },
+        {
+          "id": "7",
+          "title": "배수ㆍ배기ㆍ폐기물",
+          "score": "2.76"
+        }
+      ],
+      "subjectId": "41",
+      "reportId": "2"
     },
     {
-      "id": 3,
-      "reportId": 2,
-      "name": "계획",
-      "score": 90,
-      "total": 100
+      "id": "3",
+      "data": [
+        {
+          "id": "1",
+          "title": "친환경 혁신역량 및 개선성과 점수",
+          "score": "2.96"
+        },
+        {
+          "id": "2",
+          "title": "환경경영시스템 인증 점수",
+          "score": "2.1"
+        },
+        {
+          "id": "3",
+          "title": "친환경 제품개발 활동 점수",
+          "score": "2.66"
+        }
+      ],
+      "subjectId": "42",
+      "reportId": "1"
     },
     {
-      "id": 4,
-      "reportId": 2,
-      "name": "구축",
-      "score": 100,
-      "total": 100
+      "id": "4",
+      "data": [
+        {
+          "id": "1",
+          "title": "친환경 혁신역량 및 개선성과 점수E",
+          "score": "2.32"
+        },
+        {
+          "id": "2",
+          "title": "경영 점수",
+          "score": "2.48"
+        },
+        {
+          "id": "3",
+          "title": "친환경 제품 점수",
+          "score": "2.33"
+        },
+        {
+          "id": "4",
+          "title": "공급망 관리 점수",
+          "score": "2.89"
+        },
+        {
+          "id": "5",
+          "title": "원료 점수",
+          "score": "2.76"
+        },
+        {
+          "id": "6",
+          "title": "화학물질 배출 점수",
+          "score": "2.48"
+        },
+        {
+          "id": "7",
+          "title": "배수ㆍ배기ㆍ폐기물",
+          "score": "2.13"
+        }
+      ],
+      "subjectId": "42",
+      "reportId": "2"
+    }
+  ],
+
+  "grade": [
+    {
+      "id": "1",
+      "subjectId": "41",
+      "reportId": "1",
+      "level": 4
     },
     {
-      "id": 5,
-      "reportId": 2,
-      "name": "운영",
-      "score": 100,
-      "total": 100
+      "id": "2",
+      "subjectId": "41",
+      "reportId": "2",
+      "level": 3
     },
     {
-      "id": 6,
-      "reportId": 2,
-      "name": "점검",
-      "score": 80,
-      "total": 100
+      "id": "3",
+      "subjectId": "42",
+      "reportId": "1",
+      "level": 2
     },
     {
-      "id": 7,
-      "reportId": 3,
-      "name": "활용 지원",
-      "score": 50,
-      "total": 100
-    },
-    {
-      "id": 8,
-      "reportId": 3,
-      "name": "활용 범위",
-      "score": 70,
-      "total": 100
-    },
-    {
-      "id": 9,
-      "reportId": 3,
-      "name": "분석 인프라",
-      "score": 80,
-      "total": 100
-    },
-    {
-      "id": 10,
-      "reportId": 3,
-      "name": "데이터 분석 전문 인력",
-      "score": 80,
-      "total": 100
-    },
-    {
-      "id": 11,
-      "reportId": 3,
-      "name": "시스템 운영 및 관리",
-      "score": 85,
-      "total": 100
-    },
-    {
-      "id": 12,
-      "reportId": 4,
-      "name": "항목1",
-      "score": 50,
-      "total": 100
-    },
-    {
-      "id": 13,
-      "reportId": 4,
-      "name": "항목2",
-      "score": 70,
-      "total": 100
-    },
-    {
-      "id": 14,
-      "reportId": 4,
-      "name": "항목3",
-      "score": 80,
-      "total": 100
-    },
-    {
-      "id": 15,
-      "reportId": 4,
-      "name": "항목4",
-      "score": 80,
-      "total": 100
-    },
-    {
-      "id": 16,
-      "reportId": 4,
-      "name": "항목5",
-      "score": 85,
-      "total": 100
-    },
-    {
-      "id": 17,
-      "reportId": 5,
-      "name": "생산",
-      "score": 80,
-      "total": 100
-    },
-    {
-      "id": 18,
-      "reportId": 5,
-      "name": "품질",
-      "score": 100,
-      "total": 100
-    },
-    {
-      "id": 19,
-      "reportId": 5,
-      "name": "원가",
-      "score": 100,
-      "total": 100
-    },
-    {
-      "id": 20,
-      "reportId": 5,
-      "name": "납기",
-      "score": 90,
-      "total": 100
-    },
-    {
-      "id": 21,
-      "reportId": 1,
-      "name": "공정수준",
-      "score": 42,
-      "total": 100
-    },
-    {
-      "id": 22,
-      "reportId": 1,
-      "name": "공통",
-      "score": 60,
-      "total": 100
-    },
-    {
-      "id": 23,
-      "reportId": 2,
-      "name": "계획",
-      "score": 90,
-      "total": 100
-    },
-    {
-      "id": 24,
-      "reportId": 2,
-      "name": "구축",
-      "score": 100,
-      "total": 100
-    },
-    {
-      "id": 25,
-      "reportId": 2,
-      "name": "운영",
-      "score": 100,
-      "total": 100
-    },
-    {
-      "id": 26,
-      "reportId": 2,
-      "name": "점검",
-      "score": 80,
-      "total": 100
-    },
-    {
-      "id": 27,
-      "reportId": 3,
-      "name": "활용 지원",
-      "score": 50,
-      "total": 100
-    },
-    {
-      "id": 28,
-      "reportId": 3,
-      "name": "활용 범위",
-      "score": 70,
-      "total": 100
-    },
-    {
-      "id": 29,
-      "reportId": 3,
-      "name": "분석 인프라",
-      "score": 80,
-      "total": 100
-    },
-    {
-      "id": 30,
-      "reportId": 3,
-      "name": "데이터 분석 전문 인력",
-      "score": 80,
-      "total": 100
-    },
-    {
-      "id": 31,
-      "reportId": 3,
-      "name": "시스템 운영 및 관리",
-      "score": 85,
-      "total": 100
-    },
-    {
-      "id": 32,
-      "reportId": 4,
-      "name": "항목1",
-      "score": 50,
-      "total": 100
-    },
-    {
-      "id": 33,
-      "reportId": 4,
-      "name": "항목2",
-      "score": 70,
-      "total": 100
-    },
-    {
-      "id": 34,
-      "reportId": 4,
-      "name": "항목3",
-      "score": 80,
-      "total": 100
-    },
-    {
-      "id": 35,
-      "reportId": 4,
-      "name": "항목4",
-      "score": 80,
-      "total": 100
-    },
-    {
-      "id": 36,
-      "reportId": 4,
-      "name": "항목5",
-      "score": 85,
-      "total": 100
-    },
-    {
-      "id": 37,
-      "reportId": 5,
-      "name": "생산",
-      "score": 80,
-      "total": 100
-    },
-    {
-      "id": 38,
-      "reportId": 5,
-      "name": "품질",
-      "score": 100,
-      "total": 100
-    },
-    {
-      "id": 39,
-      "reportId": 5,
-      "name": "원가",
-      "score": 100,
-      "total": 100
-    },
-    {
-      "id": 40,
-      "reportId": 5,
-      "name": "납기",
-      "score": 90,
-      "total": 100
+      "id": "4",
+      "subjectId": "42",
+      "reportId": "2",
+      "level": 5
     }
   ]
 }
