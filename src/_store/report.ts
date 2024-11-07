@@ -2,11 +2,9 @@ import { create } from "zustand";
 import { createJSONStorage, persist, PersistOptions } from "zustand/middleware";
 
 interface state {
-  year: string;
   yearId: string;
   subjectId: string;
 
-  setYear: (year: string) => void;
   setYearId: (id: string) => void;
   setSubjectId: (id: string) => void;
 
@@ -21,11 +19,9 @@ type Persist = (
 const useReportStore = create<state>(
   (persist as Persist)(
     (set) => ({
-      year: "",
       yearId: "0",
       subjectId: "0",
 
-      setYear: (year) => set({ year: year }),
       setYearId: (id) => set({ yearId: id }),
       setSubjectId: (id) => set({ subjectId: id }),
 
