@@ -1,8 +1,8 @@
-import { table } from "@/_api/_query/useGetTables";
+import { data } from "@/_api/_query/useGetTableData";
 import { useEffect, useState } from "react";
 
 // reportItem 리렌더링 시 차트 애니메이션이 상>하로 나타나는 것을 방지하기 위한 hook
-export default function useDelayChart(tables: table[] | undefined) {
+export default function useDelayChart(tableData: data[] | undefined) {
   const [showChart, setShowChart] = useState(false);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function useDelayChart(tables: table[] | undefined) {
       clearTimeout(timeoutId);
       setShowChart(false);
     };
-  }, [tables]);
+  }, [tableData]);
 
   return showChart;
 }

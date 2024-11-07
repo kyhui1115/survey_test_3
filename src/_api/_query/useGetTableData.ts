@@ -3,27 +3,27 @@ import { useQuery, UseQueryResult } from "@tanstack/react-query";
 
 export interface tableData {
   id: string;
-  data: dataItem[];
+  dataIndex: string[];
+  data: string[];
 }
 
-interface dataItem {
-  id: string;
-  contents: {
-    [key: string]: string;
-  };
-}
-
-const getTableData = async (subjectId: string): Promise<tableData> => {
-  const res = await api.get(`/tableData/${subjectId}`);
+const getTableData = async (
+  subjectId: string,
+  reportId: string
+): Promise<tableData[]> => {
+  const res = await api.get(
+    `/tableData?subjectId=${subjectId}&reportId=${reportId}`
+  );
   return res.data;
 };
 
 const useGetTableData = (
-  subjectId: string
-): UseQueryResult<tableData, Error> => {
-  return useQuery<tableData, Error>({
-    queryKey: ["tableData", subjectId],
-    queryFn: () => getTableData(subjectId),
+  subjectId: string,
+  reportId: string
+): UseQueryResult<tableData[], Error> => {
+  return useQuery<tableData[], Error>({
+    queryKey: ["tableData", subjectId, reportId],
+    queryFn: () => getTableData(subjectId, reportId),
     staleTime: 1000 * 60 * 5,
   });
 };

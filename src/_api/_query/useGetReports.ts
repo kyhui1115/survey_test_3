@@ -14,7 +14,7 @@ const getReports = async (): Promise<report[]> => {
 const useGetReports = (): UseQueryResult<report[], Error> => {
   return useQuery<report[], Error>({
     queryKey: ["reports"],
-    queryFn: () => getReports(),
+    queryFn: getReports,
     staleTime: 1000 * 60 * 5,
   });
 };
