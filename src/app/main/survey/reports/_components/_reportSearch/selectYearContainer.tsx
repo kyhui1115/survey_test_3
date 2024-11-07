@@ -1,11 +1,12 @@
 import useGetReportYears from "@/_api/_query/useGetReportYears";
 import useReportStore from "@/_store/report";
 import { Select } from "antd";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function SelectYearContainer() {
+  const [year, setYear] = useState<string>("");
   const { data: years } = useGetReportYears();
-  const { year, setYear, setYearId } = useReportStore();
+  const { setYearId } = useReportStore();
 
   const handleChange = (value: string) => {
     setYear(years?.find((year) => year.id === value)?.year || "");
@@ -18,8 +19,9 @@ export default function SelectYearContainer() {
   }));
 
   useEffect(() => {
-    // setYear에 years의 맨 처음값 넣기
-  }, []);
+    setYear(years?.[0].year as string);
+    setYearId(years?.[0].id as string);
+  }, [years]);
 
   return (
     <div className="border border-border-gray rounded-md w-full h-10 flex items-center justify-between px-2">
