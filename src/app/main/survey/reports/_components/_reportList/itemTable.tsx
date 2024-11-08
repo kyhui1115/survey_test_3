@@ -27,7 +27,7 @@ export default function ItemTable({ subjectId, reportId }: props) {
   ];
 
   return (
-    <div className="w-1/3 justify-center items-center flex border-r border-border-gray pb-2">
+    <div className="w-[40%] justify-center items-center flex border-r border-border-gray pb-2">
       <ConfigProvider
         theme={{
           components: {

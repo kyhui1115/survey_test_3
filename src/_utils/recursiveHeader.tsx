@@ -10,7 +10,7 @@ export const recursiveHeader = (headers: tableHeader[]) => {
           <div className="flex justify-center">
             <span
               style={{
-                fontSize: 10,
+                fontSize: 11,
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 whiteSpace: "nowrap",

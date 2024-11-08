@@ -24,7 +24,7 @@ export default function ItemGrade({ subjectId, reportId }: props) {
   }, [grade]);
 
   return (
-    <div className="w-1/5 flex justify-center items-center border-r border-border-gray flex-col relative">
+    <div className="w-1/6 flex justify-center items-center border-r border-border-gray flex-col relative">
       <div className="border border-border-gray w-24 h-52 flex flex-col-reverse relative">
         {grades.map((grade, idx) => (
           <span
