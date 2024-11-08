@@ -14,7 +14,7 @@ export const recursiveHeader = (headers: tableHeader[]) => {
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 whiteSpace: "nowrap",
-                maxWidth: 70,
+                maxWidth: 100,
               }}
             >
               {header.title as string}
