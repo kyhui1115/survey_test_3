@@ -4,7 +4,7 @@ import { Select } from "antd";
 import { useEffect } from "react";
 
 export default function SelectYearContainer() {
-  const { data: years } = useGetReportYears();
+  const { data: years, isSuccess } = useGetReportYears();
   const { year, setYear, setYearId } = useReportStore();
 
   const handleChange = (value: string) => {
@@ -18,11 +18,11 @@ export default function SelectYearContainer() {
   }));
 
   useEffect(() => {
-    if (!year) {
+    if (!year && isSuccess) {
       setYear(years?.[0]?.year as string);
       setYearId(years?.[0]?.id as string);
     }
-  }, [year]);
+  }, [year, isSuccess]);
 
   return (
     <div className="border border-border-gray rounded-md w-full h-10 flex items-center justify-between px-2">
