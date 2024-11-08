@@ -21,22 +21,26 @@ export default function ReportList() {
 
   return (
     <Col className="pl-4 h-full" span={21}>
-      <div className="border border-border-gray rounded-l-md w-full h-full overflow-y-scroll px-6 pb-6 pt-3">
-        {reports?.length === 0 ? (
-          <EmptyMessage image="default" />
-        ) : (
-          <>
-            <span className="font-semibold text-lg">설문보고서</span>
-            {reports?.map((report, idx) => (
-              <ReportItem
-                key={report.id}
-                reportId={report.id}
-                title={report.title}
-                no={idx + 1}
-              />
-            ))}
-          </>
-        )}
+      <div className="border border-border-gray rounded-l-md w-full h-full flex flex-col">
+        <span className="font-semibold pl-4 flex items-center h-10 rounded-t-md">
+          설문보고서
+        </span>
+        <div className="w-full h-full overflow-y-scroll border-t border-border-gray px-6 pb-6 bg-gray-50 rounded-l-md">
+          {reports?.length === 0 ? (
+            <EmptyMessage image="default" />
+          ) : (
+            <>
+              {reports?.map((report, idx) => (
+                <ReportItem
+                  key={report.id}
+                  reportId={report.id}
+                  title={report.title}
+                  no={idx + 1}
+                />
+              ))}
+            </>
+          )}
+        </div>
       </div>
     </Col>
   );
