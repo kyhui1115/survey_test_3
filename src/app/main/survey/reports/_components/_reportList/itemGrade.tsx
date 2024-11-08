@@ -1,4 +1,5 @@
 import useGetGrade from "@/_api/_query/useGetLevel";
+import { useEffect, useState } from "react";
 
 interface props {
   subjectId: string;
@@ -6,34 +7,53 @@ interface props {
 }
 
 export default function ItemGrade({ subjectId, reportId }: props) {
+  const [height, setHeight] = useState<string>("0%");
+  const [backgroundColor, setBackgroundColor] = useState<string>("#ffffff");
   const { data: grade } = useGetGrade(subjectId, reportId);
 
-  const levels = [
-    { level: 5, color: "bg-blue-500" },
-    { level: 4, color: "bg-blue-400" },
-    { level: 3, color: "bg-blue-300" },
-    { level: 2, color: "bg-blue-200" },
-    { level: 1, color: "bg-blue-100" },
-  ];
+  const level = Number(grade?.[0]?.level);
 
-  const subjectLevel = grade?.[0]?.level;
+  useEffect(() => {
+    if (level) {
+      setHeight(20 * level + "%");
+      setBackgroundColor(color[level]);
+    } else {
+      setHeight("0%");
+      setBackgroundColor("#ffffff");
+    }
+  }, [grade]);
 
   return (
-    <div className="w-1/5 flex justify-center items-center border-r border-border-gray">
-      <div className="border border-border-gray w-28 h-52">
-        {levels.map((item) => (
-          <div
-            key={item.level}
-            className={`flex justify-center items-center w-full h-1/5 ${
-              (subjectLevel as number) >= item.level ? item.color : ""
-            } ${item.level !== 1 ? "border-b border-border-gray" : ""}`}
+    <div className="w-1/5 flex justify-center items-center border-r border-border-gray flex-col relative">
+      <div className="border border-border-gray w-24 h-52 flex flex-col-reverse relative">
+        {grades.map((grade, idx) => (
+          <span
+            key={grade}
+            className="absolute text-xs -left-11 font-semibold"
+            style={{ top: `${idx * 20 - 4}%` }}
           >
-            {(subjectLevel as number) === item.level ? (
-              <span className="text-xs font-semibold">{item.level}단계</span>
-            ) : null}
-          </div>
+            {grade} -
+          </span>
         ))}
+        <div
+          className={`w-full bg-gradient-to-t duration-400 flex justify-center items-center from-blue-100`}
+          style={{
+            height,
+            backgroundColor,
+          }}
+        />
       </div>
     </div>
   );
 }
+
+const color = [
+  "#eff6ff",
+  "#dbeafe",
+  "#bfdbfe",
+  "#93c5fd",
+  "#60a5fa",
+  "#3b82f6",
+];
+
+const grades = ["5단계", "4단계", "3단계", "2단계", "1단계"];

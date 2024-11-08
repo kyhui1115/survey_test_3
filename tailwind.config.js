@@ -19,6 +19,12 @@ module.exports = {
       width: {
         100: "25rem",
       },
+      height: {
+        "5/5": "100%",
+      },
+      transitionDuration: {
+        400: "400ms",
+      },
     },
   },
   plugins: [],
